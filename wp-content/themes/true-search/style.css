@@ -3379,15 +3379,11 @@ body .wp-pagenavi span.current {
 }
 
 .team-member-logos {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
- -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
+  
   -webkit-justify-content: space-between;
  -ms-flex-pack: justify;
   justify-content: space-between;
+  align-items: center;
   margin-top: 18px;
   width: 100%;
 }
@@ -3399,90 +3395,41 @@ body .wp-pagenavi span.current {
 @media screen and (min-width: 640px) {
   .team-member-logos {
     margin-top: 0;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+    -webkit-flex-flow: row wrap;
+     -ms-flex-flow: row wrap;
+     flex-flow: row wrap;
   }
+
 }
 
 .teammember-logo {
   display: block;
-  height: 102px;
-  margin-bottom: 29px;
-  padding: 0 34px;
   position: relative;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  width: 92%;
-}
-@media screen and (min-width: 390px) {
-  .teammember-logo {
-    height: 139px;
-  }
-}
-@media screen and (min-width: 420px) {
-  .teammember-logo {
-    display: inline-block;
-    height: 109px;
-    padding: 0 18px; 
-    width: calc(50% - 53px);
-  }
-}
-@media screen and (min-width: 480px) {
-  .teammember-logo {
-    display: inline-block;
-    height: 109px;
-    padding: 0 21px; 
-    width: calc(50% - 68px);
-  }
-}
-@media screen and (min-width: 640px) {
-  .teammember-logo {
-    height: 92px;
-    margin: 0; 
-    padding: 0;
-    width: calc(25% - 34px);
-  }
-}
-@media screen and (min-width: 740px) {
-  .teammember-logo {
-    padding: 0 10px;
-  }
-}
-@media screen and (min-width: 950px) {
-  .teammember-logo {
-    height: 77px;
-    margin: 0; 
-    padding: 0 12px;
-    width: calc(25% - 68px);
-  }
-}
-@media screen and (min-width: 1080px) {
-  .teammember-logo {
-    padding: 0 3px;
-  }
-}
-
-
-.teammember-logo img {
-  display: block;
-  height: auto;
-  /*position: absolute;*/
-  position: relative;
+  width: 40%;
+  margin: 2.0rem auto;
   text-align: center;
-  top: 50%;
-  -webkit-transform: translateY(-50%) translateZ(0);
-  -ms-transform: translateY(-50%) translateZ(0);
-  transform: translateY(-50%) translateZ(0);
-  width: 100%; 
-  -webkit-backface-visibility: hidden; 
 }
+
+@media (min-width: 640px) {
+  .teammember-logo {
+    width: 27%;
+    margin: 2.0rem 0;
+  }
+}
+
+
+
+
+
 @media screen and (min-width: 420px) {
   .teammember-logo img {
   }
 }
 @media screen and (min-width: 640px) {
   .teammember-logo img {
-    width: 100%;
-    height: auto;
   }
 }
 @media screen and (min-width: 950px) {
