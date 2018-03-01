@@ -3411,7 +3411,7 @@ body .wp-pagenavi span.current {
   display: block;
   position: relative;
   width: 40%;
-  margin: 20px auto;
+  margin: 30px auto;
   text-align: center;
 }
 
@@ -3443,7 +3443,7 @@ body .wp-pagenavi span.current {
 
 .entry-content p.noteworthy {
   margin-top: 33px;
-  margin-bottom: 12px;
+  margin-bottom: 40px;
 }
 
 /* Overview of all Team Members
