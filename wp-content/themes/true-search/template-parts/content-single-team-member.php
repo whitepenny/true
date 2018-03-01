@@ -122,7 +122,7 @@
 					?>
 
 				<?php if( $teammemberquote ) : ?>
-					<blockquote><p><?php echo $teammemberquote; ?></p></blockquote>
+					<blockquote><?php echo $teammemberquote; ?></blockquote>
 				<?php endif; ?>
 				<?php if( $quotecite ) : ?>
 					<span class="quote-cite"><?php echo $quotecite; ?></span>
