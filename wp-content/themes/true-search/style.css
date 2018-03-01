@@ -3401,6 +3401,8 @@ body .wp-pagenavi span.current {
     -webkit-flex-flow: row wrap;
      -ms-flex-flow: row wrap;
      flex-flow: row wrap;
+
+     margin: 0 -1.5%;
   }
 
 }
@@ -3409,14 +3411,14 @@ body .wp-pagenavi span.current {
   display: block;
   position: relative;
   width: 40%;
-  margin: 2.0rem auto;
+  margin: 20px auto;
   text-align: center;
 }
 
 @media (min-width: 640px) {
   .teammember-logo {
-    width: 27%;
-    margin: 2.0rem 0;
+    width: 20%;
+    margin: 10px 1.5%;
   }
 }
 

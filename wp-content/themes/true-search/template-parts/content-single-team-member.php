@@ -74,9 +74,15 @@
 						    	?>
 			                    	<img src="<?php echo $tmlogourl; ?>" alt="<?php echo $tmlogoalt; ?>" />
 			                    <?php endif; ?>
+
 			                </div>
 
 			        	    <?php endwhile; ?>
+
+			        	    <div class="teammember-logo"></div>
+			        	    <div class="teammember-logo"></div>
+			        	    <div class="teammember-logo"></div>
+			        	    <div class="teammember-logo"></div>
 			        	    </div>
 			        	<?php endif; ?>
 			        	
