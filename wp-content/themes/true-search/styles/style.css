@@ -27,16 +27,22 @@ $mainColor: #ff1516;
 }
 
 .search-overview-company-details {
-    display: flex;
+    
     justify-content: space-between;
+    align-items: flex-end;
+
+    @media screen and (min-width: 900px) {
+        display: flex;
+    }
 }
 
 .search-overview-social {
     display: flex;
-    align-items: flex-end;
+    padding-bottom: .5rem;
+    margin: 1.0rem -.5rem 0;
 
     div {
-        margin-left: 1.0rem;
+        margin: 0 .5rem;
     }
 }
 
