@@ -30,6 +30,66 @@
     
     <div class="grid1180 search-overview-container">
         
+        <div class="search-overview-sidebar">
+            <?php if ( !post_password_required() ): ?>  
+            
+            
+            <?php $logo = get_field('logo'); ?>
+            
+            <?php if($logo): ?>
+            
+            <div class="search-overview-logo">
+                <img src="<?php echo $logo['url']; ?>" alt="">    
+            </div>
+
+            <?php endif; ?>
+            
+
+            <ul class="search-overview-section-list">
+                <h2>Contents</h2> 
+                <?php $sidebarLoop = 1; ?>
+                <?php foreach ($contentSections as $section): ?>
+
+
+                    
+                    <li>
+                        <?php echo $sidebarLoop; ?>. <a class="scrollDown" href="#scrollDown<?php echo $sidebarLoop; ?>"><?php echo $section['section_heading']; ?></a>
+                            
+                    </li>
+                    
+
+                    <?php $sidebarLoop++; ?>
+                
+                <?php endforeach; ?>
+            </ul>
+
+            <?php the_field('sidebar_content'); ?>
+
+            <?php if(have_rows('team_members')): ?>
+
+            <h2>True Contacts</h2>
+            <ul class="search-overview-team-members">
+                <?php while(have_rows('team_members')) : the_row(); ?>    
+                <li>
+                    <h3><?php the_sub_field('name'); ?></h3>
+                    <p><a href="<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
+                    <p><?php the_sub_field('phone'); ?></p>
+                </li>
+                <?php endwhile; ?>
+            </ul>
+
+            <?php endif; ?>
+
+            
+
+            <div class="print-page-link">
+                <a href="javascript:window.print()"><i class="fa fa-print"></i>&nbsp;&nbsp;Print this Page</a>
+            </div>
+
+            <?php endif; ?>
+        </div>
+
+
         <div class="search-overview-content">
             
             <?php if ( post_password_required() ): ?>
@@ -60,53 +120,7 @@
             <?php endif; ?>
             
         </div>
-        <div class="search-overview-sidebar">
-            <?php if ( !post_password_required() ): ?>  
-            
-            
-
-            <ul class="search-overview-section-list">
-                <h2>Contents</h2> 
-                <?php $sidebarLoop = 1; ?>
-                <?php foreach ($contentSections as $section): ?>
-
-
-                    
-                    <li>
-                        <?php echo $sidebarLoop; ?>. <a class="scrollDown" href="#scrollDown<?php echo $sidebarLoop; ?>"><?php echo $section['section_heading']; ?></a>
-                            
-                    </li>
-                    
-
-                    <?php $sidebarLoop++; ?>
-                
-                <?php endforeach; ?>
-            </ul>
-
-            
-
-            <?php if(have_rows('team_members')): ?>
-
-            <h2>Team</h2>
-            <ul class="search-overview-team-members">
-                <?php while(have_rows('team_members')) : the_row(); ?>    
-                <li>
-                    <h3><?php the_sub_field('name'); ?></h3>
-                    <p><a href="<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
-                    <p><?php the_sub_field('phone'); ?></p>
-                </li>
-                <?php endwhile; ?>
-            </ul>
-
-            <?php endif; ?>
-
-            <?php endif; ?>
-
-            <div class="print-page-link">
-                <a href="javascript:window.print()"><i class="fa fa-print"></i>&nbsp;&nbsp;Print this Page</a>
-            </div>
-        </div>
-
+       
         
         
     </div><!-- .entry-content -->

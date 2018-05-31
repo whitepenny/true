@@ -19,11 +19,16 @@
     padding: 150px 40px 50px 40px;
 }
 .search-overview-header h1 {
-        font-size: 60px;
         margin: 0;
         font-family: 'kepler-std-semicondensed', 'Kepler Std Bold', 'Kepler Std', serif;
         font-weight: 700;
+        font-size: 42px;
     }
+@media screen and (min-width: 900px) {
+.search-overview-header h1 {
+            font-size: 60px
+    }    
+        }
 .hr {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
@@ -31,12 +36,21 @@
 .search-overview-position {
     font-size: 30px;
 }
-.search-overview-sidebar {
-    width: 30%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+.search-overview-logo {
+    margin-bottom: 30px;
 }
+.search-overview-logo img {
+        max-width: 200px;
+        height: auto;
+    }
+.search-overview-sidebar {
+    margin-bottom: 50px;
+}
+@media screen and (min-width: 900px) {
+.search-overview-sidebar {
+        width: 30%
+}
+    }
 .search-overview-sidebar h2 {
         text-transform: uppercase;
         font-weight: bold;
@@ -82,11 +96,6 @@
         display: none
 }
     }
-.search-overview-content {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-}
 @media screen and (min-width: 900px) {
 .search-overview-content {
         width: 66%
@@ -119,11 +128,15 @@
     }
 
     @page {
-        padding: .25in;
+        padding: .35in;
     }
 
     .search-overview-header {
         padding-top: 80px;
+    }
+
+    .search-overview-sidebar {
+        page-break-after: always;
     }
 
     .search-overview-section-list  {
@@ -133,6 +146,10 @@
     .search-overview-container { 
         display: block;
         width: 100%;
+    }
+
+    .print-page-link {
+        display: none;
     }
 
 }

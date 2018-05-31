@@ -16,10 +16,13 @@ $mainColor: #ff1516;
     padding: 150px 40px 50px 40px;
 
     h1 {
-        font-size: 60px;
         margin: 0;
         font-family: $headingFont;
         font-weight: 700;
+        font-size: 42px;
+        @media screen and (min-width: 900px) {
+            font-size: 60px;    
+        }
     }
 }
 
@@ -31,9 +34,22 @@ $mainColor: #ff1516;
     font-size: 30px;
 }
 
+.search-overview-logo {
+    margin-bottom: 30px;
+
+    img {
+        max-width: 200px;
+        height: auto;
+    }
+}
+
 .search-overview-sidebar {
-    width: 30%;
-    order: 1;
+    margin-bottom: 50px;
+    
+    @media screen and (min-width: 900px) {
+        width: 30%;
+    }
+
 
     h2 {
         text-transform: uppercase;
@@ -90,7 +106,6 @@ $mainColor: #ff1516;
 }
 
 .search-overview-content {
-    order: 2;
 
     @media screen and (min-width: 900px) {
         width: 66%;
@@ -126,11 +141,15 @@ $mainColor: #ff1516;
     }
 
     @page {
-        padding: .25in;
+        padding: .35in;
     }
 
     .search-overview-header {
         padding-top: 80px;
+    }
+
+    .search-overview-sidebar {
+        page-break-after: always;
     }
 
     .search-overview-section-list  {
@@ -140,6 +159,10 @@ $mainColor: #ff1516;
     .search-overview-container { 
         display: block;
         width: 100%;
+    }
+
+    .print-page-link {
+        display: none;
     }
 
 }
