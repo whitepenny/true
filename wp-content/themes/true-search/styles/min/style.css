@@ -113,6 +113,10 @@
 .search-overview-content .alignleft, .search-overview-content .alignright, .search-overview-content .aligncenter {
         margin-bottom: 20px;
     }
+.search-overview-content ul, .search-overview-content ol {
+        margin: 0 0 20px 20px;
+        padding: 0;
+    }
 .protected-post-form-content {
     display: -webkit-box;
     display: -ms-flexbox;
