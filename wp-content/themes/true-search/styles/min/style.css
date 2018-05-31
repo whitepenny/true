@@ -29,6 +29,25 @@
             font-size: 60px
     }    
         }
+.search-overview-company-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.search-overview-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+.search-overview-social div {
+        margin-left: 1.0rem;
+    }
 .hr {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;

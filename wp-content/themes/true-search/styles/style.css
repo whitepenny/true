@@ -26,6 +26,20 @@ $mainColor: #ff1516;
     }
 }
 
+.search-overview-company-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-overview-social {
+    display: flex;
+    align-items: flex-end;
+
+    div {
+        margin-left: 1.0rem;
+    }
+}
+
 .hr {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;

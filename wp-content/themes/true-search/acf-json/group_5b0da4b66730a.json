@@ -41,6 +41,103 @@
             "maxlength": ""
         },
         {
+            "key": "field_5b104e88a2e0c",
+            "label": "Social Media",
+            "name": "social_media",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5b104e94a2e0d",
+                    "label": "Facebook",
+                    "name": "facebook",
+                    "type": "text",
+                    "instructions": "Insert the Facebook URL of the Company",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b104eaca2e0e",
+                    "label": "Twitter",
+                    "name": "twitter",
+                    "type": "text",
+                    "instructions": "Insert the Twitter URL of the Company",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b104eb6a2e0f",
+                    "label": "Instagram",
+                    "name": "instagram",
+                    "type": "text",
+                    "instructions": "Insert the Instagram URL of the Company",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b104ecca2e10",
+                    "label": "LinkedIn",
+                    "name": "linkedin",
+                    "type": "text",
+                    "instructions": "Insert the LinkedIn URL of the Company",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_5b10242ce68e9",
             "label": "Logo",
             "name": "logo",
@@ -253,5 +350,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1527784560
+    "modified": 1527795437
 }

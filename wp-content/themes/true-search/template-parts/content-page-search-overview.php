@@ -17,8 +17,33 @@
         <div class="search-overview-header grid1180">
             <?php if ( !post_password_required() ): ?>         
             <h1 class="search-overview-title"><?php echo $clientName; ?></h1>
-            
-                <div class="search-overview-position"><?php echo $jobTitle; ?></div>
+                
+                <?php 
+                    $socialNetworks = get_field('social_media');
+                    $socialNetworks = $socialNetworks['0'];
+                ?>
+
+                
+
+                <div class="search-overview-company-details">
+                    <div class="search-overview-position"><?php echo $jobTitle; ?></div>
+
+                    <div class="search-overview-social">
+                        <?php if($socialNetworks['facebook']): ?>
+                        <div><a target="blank" href="<?php echo $socialNetworks['facebook'] ?>"><i class="fa fa-lg fa-facebook"></i></a></div>
+                        <?php endif; ?>
+                        <?php if($socialNetworks['twitter']): ?>
+                        <div><a target="blank" href="<?php echo $socialNetworks['twitter'] ?>"><i class="fa fa-lg fa-twitter"></i></a></div>
+                        <?php endif; ?>
+                        <?php if($socialNetworks['linkedin']): ?>
+                        <div><a target="blank" href="<?php echo $socialNetworks['linkedin'] ?>"><i class="fa fa-lg fa-linkedin"></i></a></div>
+                        <?php endif; ?>
+                        <?php if($socialNetworks['instagram']): ?>
+                        <div><a target="blank" href="<?php echo $socialNetworks['instagram'] ?>"><i class="fa fa-lg fa-instagram"></i></a></div>
+                        <?php endif; ?>
+                    </div>
+
+                    </div>
                 <div class="hr"></div>
             <?php endif ?>        
         </div>
