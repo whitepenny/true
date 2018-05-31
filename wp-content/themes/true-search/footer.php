@@ -63,7 +63,7 @@
 			</div>
 
 			<div>
-				<p style="font-size: 12px;">Copyright <?php echo date('Y') ?> True Search. All Rights Reserved.</p>
+				<p style="font-size: 12px;">Copyright <?php echo date('Y') ?> True Search. &nbsp; All Rights Reserved. &nbsp;<a href="/privacy-policy/">   Privacy Policy</a></p>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

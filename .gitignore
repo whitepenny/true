@@ -5,6 +5,7 @@
 *.bak
 *.swp
 Thumbs.db
+node_modules/
 
 # wordpress specific
 wp-config.php
@@ -61,6 +62,8 @@ wp-content/mysql.sql
 /wp-content/themes/twentyten
 /wp-content/themes/index.php
 /wp-content/plugins/index.php
+
+
 
 # large/disallowed file types
 # a CDN should be used for these

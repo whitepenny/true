@@ -1,0 +1,138 @@
+.search-overview-container {
+    
+    -webkit-box-pack: justify;
+    
+        -ms-flex-pack: justify;
+    
+            justify-content: space-between;
+    padding: 0 40px 80px 40px;
+    font-family: "aktiv-grotesk",sans-serif;
+}
+
+    @media screen and (min-width: 900px) {.search-overview-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+}
+    }
+.search-overview-header {
+    padding: 150px 40px 50px 40px;
+}
+.search-overview-header h1 {
+        font-size: 60px;
+        margin: 0;
+        font-family: 'kepler-std-semicondensed', 'Kepler Std Bold', 'Kepler Std', serif;
+        font-weight: 700;
+    }
+.hr {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.search-overview-position {
+    font-size: 30px;
+}
+.search-overview-sidebar {
+    width: 30%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+}
+.search-overview-sidebar h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 0 0 10px;
+    }
+.search-overview-sidebar ul {
+        margin: 0 0 30px 0;
+        padding: 0;
+        list-style: none;
+        
+    }
+.search-overview-sidebar a {
+        text-decoration: none;
+        color: #222;
+    }
+.search-overview-sidebar a:hover {
+            color: #ff1516;
+        }
+.search-overview-section-list {
+    line-height: 30px;
+}
+.search-overview-team-members {
+    line-height: 26px;
+}
+.search-overview-team-members h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+.search-overview-team-members li {
+        margin-bottom: 20px;
+    }
+.search-overview-team-members p {
+         margin: 0;
+         padding: 0;
+    }
+.search-overview-video {
+    margin-bottom: 30px;
+}
+@media print {
+.search-overview-video {
+        display: none
+}
+    }
+.search-overview-content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+}
+@media screen and (min-width: 900px) {
+.search-overview-content {
+        width: 66%
+}
+    }
+.search-overview-content h2 {
+        margin: 0;
+        font-family: 'kepler-std-semicondensed', 'Kepler Std Bold', 'Kepler Std', serif;
+        font-size: 42px;
+    }
+.search-overview-content p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+.search-overview-content .alignleft, .search-overview-content .alignright, .search-overview-content .aligncenter {
+        margin-bottom: 20px;
+    }
+.protected-post-form-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+@media print {
+    .main-nav__trigger {
+        display: none;
+    }
+
+    .site-footer {
+        display: none;
+    }
+
+    @page {
+        padding: .25in;
+    }
+
+    .search-overview-header {
+        padding-top: 80px;
+    }
+
+    .search-overview-section-list  {
+        display: none;
+    }
+
+    .search-overview-container { 
+        display: block;
+        width: 100%;
+    }
+
+}

@@ -66,8 +66,11 @@ function true_search_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	add_filter('embed_oembed_html', 'responsive_embed', 10, 3);
 }
 endif;
+
 add_action( 'after_setup_theme', 'true_search_setup' );
 
 /**
@@ -109,6 +112,8 @@ function true_search_scripts() {
 	wp_enqueue_style( 'true-search-header-style', get_template_directory_uri() . '/css/header.css', array(), '20160905' );
 
 	wp_enqueue_style( 'true-search-footer-style', get_template_directory_uri() . '/css/footer.css', array(), '20160905' );
+
+	wp_enqueue_style( 'true-search-add-styles', get_template_directory_uri() . '/styles/min/style.css', array(), '' );
 
 	wp_enqueue_script( 'true-search-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -181,10 +186,41 @@ function my_searchwp_common_words( $terms ) {
 }
 add_filter( 'searchwp_common_words', 'my_searchwp_common_words' );
 
-function wpb_password_post_filter( $where = '' ) {
-   if (!is_single() && !current_user_can('edit_private_posts') && !is_admin()) {
-        $where .= " AND post_password = ''";
-    }
-    return $where;
+// function wpb_password_post_filter( $where = '' ) {
+//    if (!is_single() && !current_user_can('edit_private_posts') && !is_admin()) {
+//         $where .= " AND post_password = ''";
+//     }
+//     return $where;
+// }
+// add_filter( 'posts_where', 'wpb_password_post_filter' );
+
+
+function sr_get_oembed_data( $url ) {
+  $cache_key = 'pc_oembed-' . md5( $url );
+  $oembed_data = get_transient( $cache_key );
+
+  if ( empty( $oembed_data ) ) {
+    $oembed_obj = _wp_oembed_get_object();
+    $oembed_data = $oembed_obj->get_data( $url );
+
+    set_transient( $cache_key, $oembed_data, (60 * 60 * 24 * 30) );
+  }
+
+  return $oembed_data;
 }
-add_filter( 'posts_where', 'wpb_password_post_filter' );
+
+
+add_filter( 'the_password_form', 'custom_password_form' );
+function custom_password_form() {
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<form class="protected-post-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post">
+    ' . __( "This content is password protected. To view it please enter your password below" ) . '
+    <div class="protected-post-form-content">
+    <input name="post_password" id="' . $label . '" type="password" style="background: #ffffff; border:1px solid #999; color:#333333; padding:10px;" size="20" /><input type="submit" name="Submit" class="button" value="' . esc_attr__( "Submit" ) . '" />
+    </form></div>
+    ';
+    return $o;
+}
+
+
