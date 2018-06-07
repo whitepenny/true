@@ -25,6 +25,7 @@
                             <img src="<?php echo $logo['url']; ?>" alt="">    
                             </a>
                         </div>
+                        <?php endif; ?>
                 
                 <?php 
                     $socialNetworks = get_field('social_media');
@@ -53,7 +54,7 @@
 
                     </div>
                 <div class="hr"></div>
-            <?php endif ?>        
+            <?php endif; ?>        
         </div>
     </header><!-- .entry-header -->
 
@@ -64,13 +65,8 @@
     <div class="grid1180 search-overview-container">
         
         <div class="search-overview-sidebar">
-            <?php if ( !post_password_required() ): ?>  
-            
-            
-            
-
-            <?php endif; ?>
-            
+ 
+            <?php if ( !post_password_required() ): ?>
 
             <ul class="search-overview-section-list">
                 
