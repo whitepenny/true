@@ -75,7 +75,7 @@ $mainColor: #ff1516;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 24px;
-        margin: 0 0 10px;
+        margin: 0 0 5px;
     }
 
     ul {
@@ -85,8 +85,12 @@ $mainColor: #ff1516;
         
     }
 
+    p {
+        margin: 0 0 20px;
+    }
+
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: #222;
 
         &:hover {
@@ -97,6 +101,11 @@ $mainColor: #ff1516;
 
 .search-overview-section-list {
     line-height: 30px;
+
+    a {
+        text-decoration: underline;
+        
+    }
 }
 
 .search-overview-team-members {
@@ -145,6 +154,8 @@ $mainColor: #ff1516;
         margin: 0;
         font-family: $headingFont;
         font-size: 42px;
+        line-height: 48px;
+        margin-bottom: 20px;
     }
 
     p {
@@ -159,6 +170,7 @@ $mainColor: #ff1516;
     ul, ol {
         margin: 0 0 20px 20px;
         padding: 0;
+        line-height: 28px;
     }
 }
 

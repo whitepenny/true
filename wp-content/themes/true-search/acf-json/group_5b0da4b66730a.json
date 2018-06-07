@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5b19364272116",
+            "label": "Client URL",
+            "name": "client_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5b0da5b85e33e",
             "label": "Job Title",
             "name": "job_title",
@@ -219,6 +238,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5b1937bfa6889",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5b0eb3f1d4398",
                     "label": "Email",
                     "name": "email",
@@ -331,6 +369,25 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_5b1938f61c8e7",
+            "label": "Printable Version",
+            "name": "printable_version",
+            "type": "file",
+            "instructions": "Upload a printable version of the search for download \/ printing.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -350,5 +407,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1527795437
+    "modified": 1528379673
 }

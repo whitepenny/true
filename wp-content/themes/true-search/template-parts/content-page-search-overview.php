@@ -16,7 +16,15 @@
     <header>
         <div class="search-overview-header grid1180">
             <?php if ( !post_password_required() ): ?>         
-            <h1 class="search-overview-title"><?php echo $clientName; ?></h1>
+                    <?php $logo = get_field('logo'); ?>
+                        
+                        <?php if($logo): ?>
+                        
+                        <div class="search-overview-logo">
+                            <a target="_blank" href="<?php the_field('client_url'); ?>">
+                            <img src="<?php echo $logo['url']; ?>" alt="">    
+                            </a>
+                        </div>
                 
                 <?php 
                     $socialNetworks = get_field('social_media');
@@ -59,26 +67,20 @@
             <?php if ( !post_password_required() ): ?>  
             
             
-            <?php $logo = get_field('logo'); ?>
             
-            <?php if($logo): ?>
-            
-            <div class="search-overview-logo">
-                <img src="<?php echo $logo['url']; ?>" alt="">    
-            </div>
 
             <?php endif; ?>
             
 
             <ul class="search-overview-section-list">
-                <h2>Contents</h2> 
+                
                 <?php $sidebarLoop = 1; ?>
                 <?php foreach ($contentSections as $section): ?>
 
 
                     
                     <li>
-                        <?php echo $sidebarLoop; ?>. <a class="scrollDown" href="#scrollDown<?php echo $sidebarLoop; ?>"><?php echo $section['section_heading']; ?></a>
+                        <a class="scrollDown" href="#scrollDown<?php echo $sidebarLoop; ?>"><?php echo $section['section_heading']; ?></a>
                             
                     </li>
                     
@@ -92,11 +94,12 @@
 
             <?php if(have_rows('team_members')): ?>
 
-            <h2>True Contacts</h2>
+            <h2>Contacts</h2>
             <ul class="search-overview-team-members">
                 <?php while(have_rows('team_members')) : the_row(); ?>    
                 <li>
                     <h3><?php the_sub_field('name'); ?></h3>
+                    <p><?php the_sub_field('title'); ?></p>
                     <p><a href="<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
                     <p><?php the_sub_field('phone'); ?></p>
                 </li>
@@ -106,10 +109,14 @@
             <?php endif; ?>
 
             
+            <?php $printPage =  get_field('printable_version'); ?>
+            <?php if($printPage): ?>
+
 
             <div class="print-page-link">
-                <a href="javascript:window.print()"><i class="fa fa-print"></i>&nbsp;&nbsp;Print this Page</a>
+                <a target="_blank" href="<?php echo $printPage['url']; ?>"><i class="fa fa-print"></i>&nbsp;&nbsp;Print this Page</a>
             </div>
+            <?php endif; ?>
 
             <?php endif; ?>
         </div>
