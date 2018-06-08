@@ -67,7 +67,6 @@ function true_search_setup() {
 		'default-image' => '',
 	) ) );
 
-	add_filter('embed_oembed_html', 'responsive_embed', 10, 3);
 }
 endif;
 
@@ -222,5 +221,13 @@ function custom_password_form() {
     ';
     return $o;
 }
+
+
+function sr_embed_html( $html ) {
+    return '<div class="video-container">' . $html . '</div>';
+}
+ 
+add_filter( 'embed_oembed_html', 'sr_embed_html', 10, 3 );
+add_filter( 'video_embed_html', 'sr_embed_html' ); // Jetpack
 
 

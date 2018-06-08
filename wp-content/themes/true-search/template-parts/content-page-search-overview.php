@@ -134,7 +134,7 @@
             <?php $embedCode =  wp_oembed_get($videoURL); ?>
 
             <?php if($embedCode): ?>
-                <div class="search-overview-video">
+                <div class="video-container">
                 <?php echo $embedCode; ?>
                 </div>
             <?php endif; ?>

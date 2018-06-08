@@ -160,12 +160,12 @@
          margin: 0;
          padding: 0;
     }
-.search-overview-video {
+.video-container {
     position: relative;
     padding-bottom: 56.25%;
     margin-bottom: 50px;
 }
-.search-overview-video iframe {
+.video-container iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -173,7 +173,7 @@
         height: 100%;
     }
 @media print {
-.search-overview-video {
+.video-container {
         display: none
 }
     }
