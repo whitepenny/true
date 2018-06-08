@@ -200,19 +200,27 @@ $mainColor: #ff1516;
     }
 
     .alignleft, .alignright, .aligncenter {
+        
+        margin: 0;
+        display: block;
         margin-bottom: 20px;
         float: none;
+
     }
 
     @media screen and (min-width: 900px) {
         
     
         .alignleft {
+            margin-right: 20px;
+            display: inline;
             float: left;
         }
 
         .alignright {
             float: right;
+            margin-left: 20px;
+            display: inline;
         }
 
     }
