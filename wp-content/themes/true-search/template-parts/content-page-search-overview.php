@@ -76,7 +76,7 @@
 
                     
                     <li>
-                        <a class="scrollDown" href="#scrollDown<?php echo $sidebarLoop; ?>"><?php echo $section['section_heading']; ?></a>
+                        <a class="scrollDown" href="#scrollDown<?php echo $sidebarLoop; ?>"><span><?php echo $section['section_heading']; ?></span></a>
                             
                     </li>
                     
@@ -90,17 +90,19 @@
 
             <?php if(have_rows('team_members')): ?>
 
-            <h2>Contacts</h2>
-            <ul class="search-overview-team-members">
-                <?php while(have_rows('team_members')) : the_row(); ?>    
-                <li>
-                    <h3><?php the_sub_field('name'); ?></h3>
-                    <p><?php the_sub_field('title'); ?></p>
-                    <p><a href="<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
-                    <p><?php the_sub_field('phone'); ?></p>
-                </li>
-                <?php endwhile; ?>
-            </ul>
+            <div class="search-overview-team-members-sidebar">
+                <h2>Contacts</h2>
+                <ul class="search-overview-team-members">
+                    <?php while(have_rows('team_members')) : the_row(); ?>    
+                    <li>
+                        <h3><?php the_sub_field('name'); ?></h3>
+                        <p><?php the_sub_field('title'); ?></p>
+                        <p><a href="<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
+                        <p><?php the_sub_field('phone'); ?></p>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
+            </div>
 
             <?php endif; ?>
 
@@ -144,6 +146,24 @@
 
                 <?php $contentLoop++; ?>
             <?php endforeach; ?>
+
+            <?php if(have_rows('team_members')): ?>
+
+            <div class="search-overview-team-members-content">
+                <h2>Contacts</h2>
+                <ul class="search-overview-team-members">
+                    <?php while(have_rows('team_members')) : the_row(); ?>    
+                    <li>
+                        <h3><?php the_sub_field('name'); ?></h3>
+                        <p><?php the_sub_field('title'); ?></p>
+                        <p><a href="<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
+                        <p><?php the_sub_field('phone'); ?></p>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
+            </div>
+
+            <?php endif; ?>
 
             <?php endif; ?>
             

@@ -91,8 +91,31 @@ $mainColor: #ff1516;
 
     a {
         text-decoration: underline;
-        color: #222;
+        color: $mainColor;
 
+        &:hover {
+            color: #222;
+        }
+    }
+
+    .search-overview-section-list a {
+        color: #222;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-end;
+
+        span {
+            display: inline-block;
+        } 
+
+        &:after {
+            display: inline-block;
+            font-family: 'FontAwesome';
+            content: '\f0da';
+            margin-left: 5px;
+            color: $mainColor;
+        }
+        
         &:hover {
             color: $mainColor;
         }
@@ -101,10 +124,23 @@ $mainColor: #ff1516;
 
 .search-overview-section-list {
     line-height: 30px;
+    display: none;
+
+    @media screen and (min-width: 900px) {
+        display: block;
+    }
 
     a {
         text-decoration: underline;
         
+    }
+}
+
+.search-overview-team-members-sidebar {
+    display: none;
+
+    @media screen and (min-width: 900px) {
+        display: block;        
     }
 }
 
@@ -165,6 +201,20 @@ $mainColor: #ff1516;
 
     .alignleft, .alignright, .aligncenter {
         margin-bottom: 20px;
+        float: none;
+    }
+
+    @media screen and (min-width: 900px) {
+        
+    
+        .alignleft {
+            float: left;
+        }
+
+        .alignright {
+            float: right;
+        }
+
     }
 
     ul, ol {
@@ -172,10 +222,47 @@ $mainColor: #ff1516;
         padding: 0;
         line-height: 28px;
     }
+
+    .search-overview-team-members-content {
+
+        @media (min-width: 900px) {
+            display: none;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0 0 5px;
+            font-family: "aktiv-grotesk",sans-serif;
+        }
+        ul {
+            list-style: none;
+            margin: 0 0 20px;
+            padding: 0;
+        }
+    }
 }
 
 .protected-post-form-content {
     display: flex;
+}
+
+.print-page-link {
+    display: none;
+    
+    a {
+        color: #222;
+        text-decoration: none;
+        
+        &:hover {
+            color: $mainColor;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        display: block;
+    }
 }
 
 @media print {

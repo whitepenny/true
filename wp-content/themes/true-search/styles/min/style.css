@@ -96,17 +96,54 @@
     }
 .search-overview-sidebar a {
         text-decoration: underline;
-        color: #222;
+        color: #ff1516;
     }
 .search-overview-sidebar a:hover {
+            color: #222;
+        }
+.search-overview-sidebar .search-overview-section-list a {
+        color: #222;
+        text-decoration: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+    }
+.search-overview-sidebar .search-overview-section-list a span {
+            display: inline-block;
+        }
+.search-overview-sidebar .search-overview-section-list a:after {
+            display: inline-block;
+            font-family: 'FontAwesome';
+            content: '\f0da';
+            margin-left: 5px;
+            color: #ff1516;
+        }
+.search-overview-sidebar .search-overview-section-list a:hover {
             color: #ff1516;
         }
 .search-overview-section-list {
     line-height: 30px;
+    display: none;
 }
+@media screen and (min-width: 900px) {
+.search-overview-section-list {
+        display: block
+}
+    }
 .search-overview-section-list a {
         text-decoration: underline;
         
+    }
+.search-overview-team-members-sidebar {
+    display: none;
+}
+@media screen and (min-width: 900px) {
+.search-overview-team-members-sidebar {
+        display: block
+}        
     }
 .search-overview-team-members {
     line-height: 26px;
@@ -158,17 +195,62 @@
     }
 .search-overview-content .alignleft, .search-overview-content .alignright, .search-overview-content .aligncenter {
         margin-bottom: 20px;
+        float: none;
+    }
+@media screen and (min-width: 900px) {
+        
+    
+        .search-overview-content .alignleft {
+            float: left;
+        }
+
+        .search-overview-content .alignright {
+            float: right;
+        }
+
     }
 .search-overview-content ul, .search-overview-content ol {
         margin: 0 0 20px 20px;
         padding: 0;
         line-height: 28px;
     }
+@media (min-width: 900px) {
+.search-overview-content .search-overview-team-members-content {
+            display: none
+    }
+        }
+.search-overview-content .search-overview-team-members-content h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0 0 5px;
+            font-family: "aktiv-grotesk",sans-serif;
+        }
+.search-overview-content .search-overview-team-members-content ul {
+            list-style: none;
+            margin: 0 0 20px;
+            padding: 0;
+        }
 .protected-post-form-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
+.print-page-link {
+    display: none;
+}
+.print-page-link a {
+        color: #222;
+        text-decoration: none;
+    }
+.print-page-link a:hover {
+            color: #ff1516;
+        }
+@media screen and (min-width: 900px) {
+.print-page-link {
+        display: block
+}
+    }
 @media print {
     .main-nav__trigger {
         display: none;
