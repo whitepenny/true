@@ -161,6 +161,10 @@
                     </li>
                     <?php endwhile; ?>
                 </ul>
+
+                <div class="print-page-link-lower">
+                    <a target="_blank" href="<?php echo $printPage['url']; ?>"><i class="fa fa-print"></i>&nbsp;&nbsp;Print this Page</a>
+                </div>
             </div>
 
             <?php endif; ?>

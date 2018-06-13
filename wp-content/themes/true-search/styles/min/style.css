@@ -246,21 +246,24 @@
     display: -ms-flexbox;
     display: flex;
 }
-.print-page-link {
+.print-page-link, .print-page-link-lower {
     display: none;
 }
-.print-page-link a {
+.print-page-link a, .print-page-link-lower a {
         color: #222;
         text-decoration: none;
     }
-.print-page-link a:hover {
+.print-page-link a:hover, .print-page-link-lower a:hover {
             color: #ff1516;
         }
 @media screen and (min-width: 900px) {
-.print-page-link {
+.print-page-link, .print-page-link-lower {
         display: block
 }
     }
+.print-page-link-lower {
+    display: block;
+}
 @media print {
     .main-nav__trigger {
         display: none;

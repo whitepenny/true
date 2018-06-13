@@ -259,7 +259,7 @@ $mainColor: #ff1516;
     display: flex;
 }
 
-.print-page-link {
+.print-page-link, .print-page-link-lower {
     display: none;
     
     a {
@@ -274,6 +274,10 @@ $mainColor: #ff1516;
     @media screen and (min-width: 900px) {
         display: block;
     }
+}
+
+.print-page-link-lower {
+    display: block;
 }
 
 @media print {
