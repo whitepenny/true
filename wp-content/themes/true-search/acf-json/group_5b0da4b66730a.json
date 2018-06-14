@@ -397,6 +397,13 @@
                 "operator": "==",
                 "value": "template-parts\/page-search-overview.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "specification"
+            }
         ]
     ],
     "menu_order": 0,
@@ -407,5 +414,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528465689
+    "modified": 1528984111
 }
