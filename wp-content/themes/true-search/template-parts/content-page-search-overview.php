@@ -18,14 +18,18 @@
             <?php if ( !post_password_required() ): ?>         
                     <?php $logo = get_field('logo'); ?>
                         
-                        <?php if($logo): ?>
+                        
                         
                         <div class="search-overview-logo">
                             <a target="_blank" href="<?php the_field('client_url'); ?>">
                             <img src="<?php echo $logo['url']; ?>" alt="">    
                             </a>
+                            
+                            <div>
+                            <a href="https://truesearch.com" class="search-overview-explore-button btn-primary">Explore True</a>
+                            </div>
                         </div>
-                        <?php endif; ?>
+                        
                 
                 <?php 
                     $socialNetworks = get_field('social_media');
