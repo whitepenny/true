@@ -340,4 +340,176 @@
         background: #000;
         color: #fff;
     }
+.placement-filter-toolbar {
+    padding: 100px 20px 20px;
+}
+@media (min-width: 800px) {
+.placement-filter-toolbar {
+        display: inline-block
+}
+    }
+.placement-filter-toolbar ul {
+        
+        -webkit-box-pack: justify;
+        
+            -ms-flex-pack: justify;
+        
+                justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+@media (min-width: 960px) {
+.placement-filter-toolbar ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+        }
+.placement-filter-toolbar li {
+    }
+.searchandfilter ul {
+            margin: 0;
+            padding: 0;
+            margin: 0 -5px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+.searchandfilter ul li {
+                margin: 0;
+                padding: 0;
+                margin: 5px;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+@media (min-width: 960px) {
+.searchandfilter ul li {
+                    width: auto
+            }
+                }
+.searchandfilter label {
+            display: block;
+            width: 100%;
+        }
+@media (min-width: 960px) {
+.searchandfilter label {
+                display: inline-block
+        }
+            }
+.searchandfilter select {
+            color: #555;
+            padding: 10px;
+            background: #fff;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding: 10px;
+            position: relative;
+            padding-right: 40px;
+            background: #fff url('../../svg/down_arrow.svg') right 10px center no-repeat;
+            width: 100%;
+        }
+@media (min-width: 960px) {
+.searchandfilter select {
+                width: auto
+        }
+            }
+.searchandfilter label {
+            padding: 10px;
+        }
+.placement-previews {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-bottom: 100px;
+}
+.placement-preview {
 
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+}
+@media (min-width: 800px) {
+.placement-preview {
+        width: calc(100%/3)
+}
+    }
+@media (min-width: 1000px) {
+.placement-preview {
+        width: calc(100%/4)
+}
+    }
+@media (min-width: 1400px) {
+.placement-preview {
+        width: calc(100%/5)
+}
+    }
+.placement-preview__container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+
+}
+.placement-preview__content {
+    padding: 0 20px 30px 20px;
+    text-align: center;
+    background: #fff;
+}
+.placement-preview__content ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+.placement-preview__content ul li {
+            margin: 0;
+            padding: 0;
+        }
+.placement-preview__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 150px;
+    background: #fff;
+}
+.placement-preview__image img {
+        max-width: 50%;
+        max-height: 80%;
+    }
+.placement-no-results {
+    background: rgba(255,255,255,.4);
+    padding:20px;
+    width: 100%;
+}
+.placement-no-results h2 {
+        font-weight: normal;
+        color: #000;
+    }
