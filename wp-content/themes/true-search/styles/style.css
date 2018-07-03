@@ -416,6 +416,10 @@ $mainColor: #ff1516;
             }
         }
 
+        select::-ms-expand {
+            display: none;
+        }
+
         label {
             padding: 10px;
         }
