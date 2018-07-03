@@ -24,7 +24,7 @@
                     
                     <div style="text-align: center;">
                     <div class="placement-filter-toolbar">
-                    <?php echo do_shortcode('[searchandfilter id="2164"]' ); ?>
+                    <?php echo do_shortcode('[searchandfilter slug="placements"]' ); ?>
                     </div>
                     </div>
                     
