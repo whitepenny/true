@@ -414,6 +414,9 @@
                 width: auto
         }
             }
+.searchandfilter select::-ms-expand {
+            display: none;
+        }
 .searchandfilter label {
             padding: 10px;
         }
@@ -503,6 +506,8 @@
 .placement-preview__image img {
         max-width: 50%;
         max-height: 80%;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
     }
 .placement-no-results {
     background: rgba(255,255,255,.4);
