@@ -11,6 +11,7 @@
   "devDependencies": {
     "autoprefixer": "^8.5.1",
     "del": "^3.0.0",
+    "formstone": "^1.4.8",
     "gulp": "^3.9.1",
     "gulp-cache": "^1.0.2",
     "gulp-concat": "^2.6.1",

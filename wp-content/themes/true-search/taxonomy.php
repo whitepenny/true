@@ -3,6 +3,8 @@
 
 <?php get_header(); ?>
 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/styles/dist/main.min.js"></script>
+
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
@@ -49,12 +51,9 @@
                                         <div class="placement-preview__content">
                                             <h3><?php the_field('placement_position'); ?></h3>
                                             <ul>
-                                                <li><?php $practice = get_the_terms($post, 'placement_practice'); echo $practice[0]->name; ?></li>
-                                                <li><?php $asset = get_the_terms($post, 'placement_asset'); echo $asset[0]->name; ?></li>
+                                                                                                
                                                 <li><?php $location = get_the_terms($post, 'placement_location'); echo $location[0]->name; ?></li>
-                                                <?php while(have_rows('placement_recruiter')) : the_row(); ?>
-                                                <li><a href="mailto: <?php the_sub_field('email'); ?>"><?php the_sub_field('name'); ?></a></li>
-                                                <?php endwhile; ?>
+                                                
 
                                             </ul>
                                         </div>
@@ -83,5 +82,13 @@
 
         </main><!-- #main -->
     </div><!-- #primary -->
+
+    <script>
+        (function($) {
+            
+            $('.placement-preview__container').equalize();
+            
+        })( jQuery );
+    </script>
 
 <?php get_footer(); ?>

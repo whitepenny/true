@@ -65,11 +65,12 @@ gulp.task('images', function() {
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(theme_dir + '**/*.css', ['css']);
+    gulp.watch(theme_dir + 'lib/**/*.js', ['scripts']);
     gulp.watch([theme_dir +'min/**/*', theme_dir +'../*/**.php']).on(['change'], livereload.changed);
 
 });
 
 
-gulp.task('default', ['css', 'watch']);
+gulp.task('default', ['css', 'scripts', 'watch']);
 
 
