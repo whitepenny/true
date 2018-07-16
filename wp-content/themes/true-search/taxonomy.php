@@ -86,7 +86,7 @@
     <script>
         (function($) {
             
-            $('.placement-preview__container').equalize();
+            $('.placement-previews').equalize();
             
         })( jQuery );
     </script>
