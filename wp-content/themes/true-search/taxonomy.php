@@ -68,12 +68,25 @@
                                 </div>
                             <?php endif; ?>
 
+
+
                             
 
                             
                         </div>
 
+                        <?php 
+                        echo '<div class="pagination">';
+                        echo paginate_links(array(
+                            'type' => 'list',
+                            'prev_text' => 'previous',
+                            'next_text' => 'next',
+                        ));
+                        echo '</div>';
+                        ?>
+
                     </div>
+
                     
                 </div><!-- .entry-content -->
 
@@ -87,6 +100,10 @@
         (function($) {
             
             $('.placement-previews').equalize();
+
+            $(document).on("sf:ajaxfinish", ".searchandfilter", function(){
+                $('.placement-previews').equalize("resize");
+            });
             
         })( jQuery );
     </script>

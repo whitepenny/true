@@ -356,7 +356,7 @@ $mainColor: #ff1516;
     }
     ul {
         
-        justify-content: space-between;
+        
         flex-wrap: wrap;
 
         @media (min-width: 960px) {
@@ -510,4 +510,50 @@ $mainColor: #ff1516;
         font-weight: normal;
         color: #000;
     }
+}
+
+.pagination {
+    text-align: center;
+
+
+    ul {
+        li {
+            display: inline-block;
+        }
+    }
+
+    a {
+        text-decoration: none;
+
+    }
+}
+
+.pagination .next, .pagination .prev {
+    font-family: 'ssstandard';
+    font-size: 1rem;
+}
+
+.page-numbers {
+    display: inline-block;
+    font-weight: bold;
+    
+
+    &.current {
+        background: $mainColor;
+        color: #000;
+    }
+}
+
+span.page-numbers, a.page-numbers {
+    background: #fafafa;
+    width: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+}
+
+.sf-field-reset {
+    display: flex !important;
+    align-items: center;
+    font-size: 12px;
+    padding: 10px !important;
 }
