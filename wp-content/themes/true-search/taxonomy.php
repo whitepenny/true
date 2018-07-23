@@ -52,7 +52,7 @@
                                             <h3><?php the_field('placement_position'); ?></h3>
                                             <ul>
                                                                                                 
-                                                <li><?php $location = get_the_terms($post, 'placement_location'); echo $location[0]->name; ?></li>
+                                                <li><?php the_field('placement_location'); ?></li>
                                                 
 
                                             </ul>
