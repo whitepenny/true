@@ -230,4 +230,12 @@ function sr_embed_html( $html ) {
 add_filter( 'embed_oembed_html', 'sr_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'sr_embed_html' ); // Jetpack
 
+function sr_placement_taxonomy_queries( $query ) {
+    if ( !is_admin() && $query->is_tax( 'placement_collection' ) && $query->is_main_query() ) {
+        $query->set( 'orderby', 'title' );
+        $query->set( 'order', 'ASC' );
+    }
+}
+add_action( 'pre_get_posts', 'sr_placement_taxonomy_queries' );
+
 
