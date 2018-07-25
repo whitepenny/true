@@ -128,9 +128,10 @@
 					<span class="quote-cite"><?php echo $quotecite; ?></span>
 				<?php endif; ?>
 				
-
-				<h2 class="headline-style-7">Snapshot</h2>
+				
 				<?php if( $quickfacts ) : ?>
+				<h2 class="headline-style-7">Snapshot</h2>
+				
 					<div class="quick-facts"><?php echo $quickfacts; ?></div>
 				<?php endif; ?>
 			</div>
