@@ -110,7 +110,7 @@
 .search-overview-sidebar h2 {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 18px;
         margin: 0 0 5px;
     }
 .search-overview-sidebar ul {
@@ -554,3 +554,11 @@ span.page-numbers, a.page-numbers {
     font-size: 12px;
     padding: 10px !important;
 }
+.search-overview-explore-button {
+    display: none;
+}
+@media (min-width: 900px) {
+.search-overview-explore-button {
+        display: inline-block
+}
+    }

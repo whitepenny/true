@@ -89,7 +89,7 @@ $mainColor: #ff1516;
     h2 {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 18px;
         margin: 0 0 5px;
     }
 
@@ -556,4 +556,12 @@ span.page-numbers, a.page-numbers {
     align-items: center;
     font-size: 12px;
     padding: 10px !important;
+}
+
+.search-overview-explore-button {
+    display: none;
+
+    @media (min-width: 900px) {
+        display: inline-block;
+    }
 }

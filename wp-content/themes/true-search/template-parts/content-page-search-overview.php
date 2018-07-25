@@ -95,7 +95,7 @@
             <?php if(have_rows('team_members')): ?>
 
             <div class="search-overview-team-members-sidebar">
-                <h2>Contacts</h2>
+                <h2>Search Team</h2>
                 <ul class="search-overview-team-members">
                     <?php while(have_rows('team_members')) : the_row(); ?>    
                     <li>
