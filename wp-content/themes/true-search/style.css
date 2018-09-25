@@ -9,7 +9,7 @@ Version: 1.0.0
 
 /* ===========================================================
        TABLE OF CONTENTS
-       
+
        0 Color Palette
        1 Reset
        2 Grids
@@ -35,7 +35,7 @@ Version: 1.0.0
 	  12.4 Company
 	  12.5 Locations
           12.6 Clients (Overview and Single)
-          12.7 Insights (Blog) 
+          12.7 Insights (Blog)
           12.8 Team (Single and Overview)
           12.9 Sectors, Assets, Functions
          12.10 Default Page
@@ -50,17 +50,17 @@ Version: 1.0.0
 
 /* ============================================================
        0 COLOR PALETTE
-   ============================================================ 
-       
+   ============================================================
+
        Pure Black           000000
        Vivid Red            ff1516
-      
+
 
        Very Light Gray      f3f3f3
 
-       Body Text Gray       
+       Body Text Gray
        Reverse Text Gray    96a2a1
-    
+
    ============================================================ */
 
 /* ============================================================
@@ -574,7 +574,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  background: #fff; 
+  background: #fff;
   overflow-x: hidden;
 }
 .site {
@@ -771,7 +771,7 @@ a.footer-map-link {
   clear: none;
   display: block;
   padding: 136px 0 58px;
-  position: fixed; 
+  position: fixed;
   right: 0;
   top: 0;
   width: 320px;
@@ -799,7 +799,7 @@ a.footer-map-link {
   position: relative;
 }
 .main-navigation a {
-  color: #fff;  
+  color: #fff;
   display: block;
   font-size: 16.5px;
   font-weight: 500;
@@ -896,7 +896,7 @@ a.footer-map-link {
 /*
 .cbp-spmenu {
   background: #000;
-  position: absolute; 
+  position: absolute;
 }
 .cbp-spmenu-vertical {
   height: auto;
@@ -908,7 +908,7 @@ a.footer-map-link {
 }
 @media screen and (min-width: 480px) {
   .cbp-spmenu-vertical {
-    height: auto; 
+    height: auto;
     min-height: 100vh;
     width: 363px;
   }
@@ -978,7 +978,7 @@ a.footer-map-link {
 /*
 .site-header {
   left: 0;
-  position: absolute; 
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 100;
@@ -987,7 +987,7 @@ a.footer-map-link {
   background-color: #fff;
   height: 81px;
   margin: 0 auto;
-  position: relative; 
+  position: relative;
   width: 100%;
 }
 
@@ -1016,9 +1016,9 @@ a.footer-map-link {
   font-size: 32px;
   font-weight: 300;
   height: 84px;
-  line-height: 84px; 
+  line-height: 84px;
   margin-left: 0;
-  margin-right: auto;  
+  margin-right: auto;
   max-width: 1120px;
   padding-left: 0;
   width: 100%;
@@ -1031,21 +1031,21 @@ a.footer-map-link {
   display: none;
 }
 
-#true-search-bar input::-webkit-input-placeholder {  
+#true-search-bar input::-webkit-input-placeholder {
   color: #aaa;
   opacity: 1;
 }
-#true-search-bar input:-moz-placeholder { 
-  color: #aaa; 
-  opacity: 1; 
+#true-search-bar input:-moz-placeholder {
+  color: #aaa;
+  opacity: 1;
 }
 #true-search-bar input::-moz-placeholder {
   color: #aaa;
   opacity: 1;
 }
-#true-search-bar input:-ms-input-placeholder {  
-  color: #aaa; 
-  opacity: 1; 
+#true-search-bar input:-ms-input-placeholder {
+  color: #aaa;
+  opacity: 1;
 }
 
 
@@ -1098,7 +1098,7 @@ a.footer-map-link {
   display: inline-block;
   height: 81px;
   padding: 0;
-  position: absolute; 
+  position: absolute;
   right: 0;
   top: 0;
   width: 81px;
@@ -1158,7 +1158,7 @@ a.footer-map-link {
   transition: margin-left .06s cubic-bezier(.19,1,.22,1);
 }
 .menu-toggle.active .hamburger-icon:before {
-  -webkit-transform: rotate(45deg) translate(6px,8px); 
+  -webkit-transform: rotate(45deg) translate(6px,8px);
   -moz-transform: rotate(45deg) translate(6px,8px);
   -o-transform: rotate(45deg) translate(6px,8px);
   -ms-transform: rotate(45deg) translate(6px,8px);
@@ -1193,7 +1193,7 @@ a.footer-map-link {
        7 ACCESSIBILITY
    ========================================================= */
 
-/* Text meant only for screen readers. 
+/* Text meant only for screen readers.
 ------------------------------------------------------------ */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -1467,7 +1467,7 @@ a.footer-map-link {
   background-color: #000;
   height: 37px;
   margin: 0 auto;
-  text-align: center; 
+  text-align: center;
   width: 80px;
 }
 .footer-divider-map-marker .fa-map-marker {
@@ -1517,7 +1517,7 @@ a.footer-map-link {
     width: 208px;
   }
   .the-location:nth-of-type(4n+2) {
-    margin-right: 4px; 
+    margin-right: 4px;
   }
   .the-location:nth-of-type(4n+3) {
     margin-left: 39px;
@@ -1811,7 +1811,7 @@ body .et_monarch .et_social_sidebar_networks ul {
   display: inline-block;
 }
 
-  
+
 
 /* Section One
 ------------------------------------------------------------ */
@@ -2223,22 +2223,22 @@ body .et_monarch .et_social_sidebar_networks ul {
 /* =========================================================
     12.3 CONTACT
    ========================================================= */
-  
-::-webkit-input-placeholder {  
+
+::-webkit-input-placeholder {
   color: #010101;
   opacity: 1;
 }
-:-moz-placeholder { 
-  color: #010101; 
-  opacity: 1; 
-}
-::-moz-placeholder { 
-  color: #010101;  
+:-moz-placeholder {
+  color: #010101;
   opacity: 1;
 }
-:-ms-input-placeholder {  
-  color: #010101; 
-  opacity: 1; 
+::-moz-placeholder {
+  color: #010101;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #010101;
+  opacity: 1;
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type="checkbox"]:checked, .gform_wrapper ul.gfield_radio li input[type="radio"]:checked {
@@ -2703,7 +2703,7 @@ body .gform_wrapper .gform_footer input.button, body .gform_wrapper .gform_foote
 .client-overview-arrow {
   border-style: solid;
   border-width: 52px 68px 0 68px;
-  border-color: #fff transparent transparent transparent; 
+  border-color: #fff transparent transparent transparent;
   height: 0;
   left: calc((100% - 136px) / 2);
   position: absolute;
@@ -2960,7 +2960,7 @@ body .gform_wrapper .gform_footer input.button, body .gform_wrapper .gform_foote
   opacity: 0;
 }
 
-  
+
 /* =========================================================
     12.7 INSIGHTS (BLOG)
    ========================================================= */
@@ -3144,7 +3144,7 @@ body .wp-pagenavi span.current {
 
 /* Single Team Member
 ------------------------------------------------------------ */
-  
+
 .single-team-member .site-branding, .single-client .site-branding {
   background-color: transparent;
 }
@@ -3254,7 +3254,7 @@ body .wp-pagenavi span.current {
 }
 
 
-.single-member-meta-links { 
+.single-member-meta-links {
   display: block;
 }
 @media screen and (min-width: 980px) {
@@ -3358,7 +3358,7 @@ body .wp-pagenavi span.current {
   background-color: transparent;
   color: #000;
   font-family: 'kepler-std', 'Kepler Std Regular', 'Kepler Std', serif;
-  padding-top: 0; 
+  padding-top: 0;
   padding-bottom: 12px;
   padding-left: 0;
 }
@@ -3380,7 +3380,7 @@ body .wp-pagenavi span.current {
 }
 
 .team-member-logos {
-  
+
   -webkit-justify-content: space-between;
  -ms-flex-pack: justify;
   justify-content: space-between;
@@ -3525,7 +3525,7 @@ body .wp-pagenavi span.current {
   }
 }
 @media screen and (min-width: 1600px) {
-  .featured-team-member {  
+  .featured-team-member {
     height: 576px;
   }
   .grid-team-member {
@@ -3612,9 +3612,9 @@ body .wp-pagenavi span.current {
   top: 0;
   width: 100%;
 }
-.featured-team-member:focus > .featured-red-mask, .featured-team-member:hover > .featured-red-mask, 
+.featured-team-member:focus > .featured-red-mask, .featured-team-member:hover > .featured-red-mask,
 .featured-team-member:focus .featured-team-member-mask, .featured-team-member .featured-team-member-mask.displayed,
-.grid-team-member:focus > .grid-red-mask, .grid-team-member:hover > .grid-red-mask, 
+.grid-team-member:focus > .grid-red-mask, .grid-team-member:hover > .grid-red-mask,
 .grid-team-member:focus .grid-team-member-mask, .grid-team-member .grid-team-member-mask.displayed {
   opacity: 1;
 }
@@ -3704,7 +3704,7 @@ body .wp-pagenavi span.current {
   text-transform: uppercase;
 }
 
-.featured-team-member .information-container .headline-style-7, 
+.featured-team-member .information-container .headline-style-7,
 .grid-team-member .information-container .headline-style-7 {
   margin: 0 0 7px;
 }
@@ -3921,7 +3921,7 @@ body .wp-pagenavi span.current {
 .client-overview-arrow-2 {
   border-style: solid;
   border-width: 23px 28px 0 28px;
-  border-color: #f3f3f3 transparent transparent transparent; 
+  border-color: #f3f3f3 transparent transparent transparent;
   height: 0;
   left: calc((100% - 56px) / 2);
   position: absolute;
@@ -3930,7 +3930,7 @@ body .wp-pagenavi span.current {
   z-index: 2;
 }
 
-/* Section Three 
+/* Section Three
 ------------------------------------------------------------ */
 
 .sector-section-three {
@@ -3947,7 +3947,7 @@ body .wp-pagenavi span.current {
   }
 }
 
-/* Section Four 
+/* Section Four
 ------------------------------------------------------------ */
 
 .sector-section-four {
@@ -4082,24 +4082,24 @@ body .wp-pagenavi span.current {
 }
 
 .search-results .entry-header-inner {
-  
+
 }
 @media screen and (min-width: 783px) {
   .search-results .entry-header-inner,
   .search .entry-header-inner {
-    padding-top: 158px;  
+    padding-top: 158px;
   }
 }
 @media screen and (min-width: 1008px) {
   .search-results .entry-header-inner,
   .search .entry-header-inner {
-    padding-top: 139px;  
+    padding-top: 139px;
   }
 }
 @media screen and (min-width: 1166px) {
   .search-results .entry-header-inner,
   .search .entry-header-inner {
-    padding-top: 143px;  
+    padding-top: 143px;
   }
 }
 
@@ -4195,7 +4195,7 @@ body .wp-pagenavi span.current {
 }
 
 /* =========================================================
-      14 MEDIA 
+      14 MEDIA
    ========================================================= */
 
 .page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley {
@@ -4321,4 +4321,40 @@ span.gform_drop_instructions {
       padding: 1em .75em;
   }
   span.gform_drop_instructions {display:none;}
+}
+
+
+
+
+
+/* BP Edits - 09/2018 */
+
+@media (min-width: 960px) {
+
+  body .searchandfilter ul li {
+    width: 16%;
+  }
+
+  body .searchandfilter ul li:last-child {
+    width: 10%;
+  }
+
+  body .searchandfilter select.sf-input-select {
+    min-width: 0px;
+    max-width: 100%;
+    width: 100%;
+
+    font-size: 16px;
+  }
+
+  body .searchandfilter label {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1300px) {
+
+  body .searchandfilter ul li {
+    width: 17%;
+  }
 }

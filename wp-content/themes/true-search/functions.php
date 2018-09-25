@@ -119,7 +119,7 @@ function true_search_scripts() {
 	wp_enqueue_script( 'true-search-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'true-search-flexibility', get_template_directory_uri() . '/js/flexibility.js', array(), '20160821', true );
-	
+
 	wp_enqueue_script( 'true-search-classie', get_template_directory_uri() . '/js/classie.min.js', array(), '20160822', true );
 
 	wp_enqueue_script( 'true-search-smoothscroll', get_template_directory_uri() . '/js/smooth-scroll.min.js', array('jquery'), '20160822', true );
@@ -175,12 +175,12 @@ if( function_exists('acf_add_options_page') ) {
  */
 
 function my_searchwp_common_words( $terms ) {
-  
+
   // we DO NOT want to ignore 'first' so remove it from the list of common words
   $words_to_keep = array( 'first', 'true', 'last', 'nothing', 'hundred', 'users', 'inc', 'inc.', 'next', 'new', 'news', 'fire', 'together', 'front', 'further'  );
-  
+
   $terms = array_diff( $terms, $words_to_keep );
-  
+
   return $terms;
 }
 add_filter( 'searchwp_common_words', 'my_searchwp_common_words' );
@@ -226,7 +226,7 @@ function custom_password_form() {
 function sr_embed_html( $html ) {
     return '<div class="video-container">' . $html . '</div>';
 }
- 
+
 add_filter( 'embed_oembed_html', 'sr_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'sr_embed_html' ); // Jetpack
 
@@ -237,5 +237,35 @@ function sr_placement_taxonomy_queries( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'sr_placement_taxonomy_queries' );
+
+
+
+// Search edits - BP 09/2018
+
+function custom_post_type_search( $query ) {
+  if (!is_admin() && $query->is_search) {
+    $post_types = get_field( 'search_include_post_types', 'option' );
+    $categories = get_field( 'search_exclude_categories', 'option' );
+
+    $query->set('post_type', $post_types);
+    $query->set('category__not_in', $categories);
+  }
+  return $query;
+}
+add_filter( 'pre_get_posts', 'custom_post_type_search' );
+
+function acf_load_post_types($field) {
+  $post_types = get_post_types();
+
+  $field['choices'] = array();
+
+  foreach ($post_types as $post_type) {
+    $field['choices'][ $post_type ] = $post_type;
+  }
+
+  return $field;
+}
+add_filter('acf/load_field/name=search_include_post_types', 'acf_load_post_types');
+
 
 

@@ -38,13 +38,13 @@ function placement_practices() {
       'all_items'         => __( 'All Placement Practice' ),
       'parent_item'       => __( 'Parent Placement Practice' ),
       'parent_item_colon' => __( 'Parent Placement Practice' ),
-      'edit_item'         => __( 'Edit Placement Practice' ), 
+      'edit_item'         => __( 'Edit Placement Practice' ),
       'update_item'       => __( 'Update Placement Practice' ),
       'add_new_item'      => __( 'Add New Placement Practice' ),
       'new_item_name'     => __( 'New Placement Practice' ),
       'menu_name'         => __( 'Placement Practice' ),
     );
-  
+
   $args = array(
     'labels' => $labels,
   );
@@ -62,13 +62,13 @@ function placement_functions() {
       'all_items'         => __( 'All Placement Function' ),
       'parent_item'       => __( 'Parent Placement Function' ),
       'parent_item_colon' => __( 'Parent Placement Function' ),
-      'edit_item'         => __( 'Edit Placement Function' ), 
+      'edit_item'         => __( 'Edit Placement Function' ),
       'update_item'       => __( 'Update Placement Function' ),
       'add_new_item'      => __( 'Add New Placement Function' ),
       'new_item_name'     => __( 'New Placement Function' ),
       'menu_name'         => __( 'Placement Functions' ),
     );
-  
+
   $args = array(
     'labels' => $labels,
   );
@@ -86,13 +86,13 @@ function placement_assets() {
       'all_items'         => __( 'All Placement Asset' ),
       'parent_item'       => __( 'Parent Placement Asset' ),
       'parent_item_colon' => __( 'Parent Placement Asset' ),
-      'edit_item'         => __( 'Edit Placement Asset' ), 
+      'edit_item'         => __( 'Edit Placement Asset' ),
       'update_item'       => __( 'Update Placement Asset' ),
       'add_new_item'      => __( 'Add New Placement Asset' ),
       'new_item_name'     => __( 'New Placement Asset' ),
       'menu_name'         => __( 'Placement Asset' ),
     );
-  
+
   $args = array(
     'labels' => $labels,
   );
@@ -110,13 +110,13 @@ function placement_locations() {
       'all_items'         => __( 'All Placement Location' ),
       'parent_item'       => __( 'Parent Placement Location' ),
       'parent_item_colon' => __( 'Parent Placement Location' ),
-      'edit_item'         => __( 'Edit Placement Location' ), 
+      'edit_item'         => __( 'Edit Placement Location' ),
       'update_item'       => __( 'Update Placement Location' ),
       'add_new_item'      => __( 'Add New Placement Location' ),
       'new_item_name'     => __( 'New Placement Location' ),
       'menu_name'         => __( 'Placement Location' ),
     );
-  
+
   $args = array(
     'labels' => $labels,
   );
@@ -134,17 +134,41 @@ function placement_collection() {
       'all_items'         => __( 'All Placement Collection' ),
       'parent_item'       => __( 'Parent Placement Collection' ),
       'parent_item_colon' => __( 'Parent Placement Collection' ),
-      'edit_item'         => __( 'Edit Placement Collection' ), 
+      'edit_item'         => __( 'Edit Placement Collection' ),
       'update_item'       => __( 'Update Placement Collection' ),
       'add_new_item'      => __( 'Add New Placement Collection' ),
       'new_item_name'     => __( 'New Placement Collection' ),
       'menu_name'         => __( 'Placement Collection' ),
     );
-  
+
   $args = array(
     'labels' => $labels,
   );
 
   register_taxonomy( 'placement_collection', 'placement', $args );
+}
+
+add_action('init', 'placement_quarters', 0);
+
+function placement_quarters() {
+    $labels = array(
+      'name'              => _x( 'Placement Quarters', 'taxonomy general name' ),
+      'singular_name'     => _x( 'Placement Quarter', 'taxonomy singular name' ),
+      'search_items'      => __( 'Show Placement Quarters' ),
+      'all_items'         => __( 'All Placement Quarters' ),
+      'parent_item'       => __( 'Parent Placement Quarter' ),
+      'parent_item_colon' => __( 'Parent Placement Quarter' ),
+      'edit_item'         => __( 'Edit Placement Quarter' ),
+      'update_item'       => __( 'Update Placement Quarter' ),
+      'add_new_item'      => __( 'Add New Placement Quarter' ),
+      'new_item_name'     => __( 'New Placement Quarter' ),
+      'menu_name'         => __( 'Placement Quarters' ),
+    );
+
+  $args = array(
+    'labels' => $labels,
+  );
+
+  register_taxonomy( 'placement_quarters', 'placement', $args );
 }
 
