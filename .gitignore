@@ -8,7 +8,7 @@ Thumbs.db
 node_modules/
 
 # wordpress specific
-wp-config.php
+wp-config.php*
 wp-content/uploads/
 wp-content/blogs.dir/
 wp-content/upgrade/*
@@ -62,7 +62,7 @@ wp-content/mysql.sql
 /wp-content/themes/twentyten
 /wp-content/themes/index.php
 /wp-content/plugins/index.php
-
+/wp-content/updraft/
 
 
 # large/disallowed file types
