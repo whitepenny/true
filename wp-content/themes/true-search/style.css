@@ -4358,3 +4358,96 @@ span.gform_drop_instructions {
     width: 17%;
   }
 }
+
+
+/* BP Edits - Glient Groups */
+
+.client_group_buttons {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.client_group_button {
+  /* background: #AFB0B3; */
+  background: #fff;
+  border: none;
+  border-color: #ff1516;
+  border-radius: 0;
+  /* color: #fff; */
+  color: #666;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 21px 56px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  -webkit-transition: all .23s ease;
+  -moz-transition: all .23s ease;
+  -o-transition: all .23s ease;
+  transition: all .23s ease;
+}
+
+.client_group_button:focus,
+.client_group_button:active {
+  outline: 0;
+}
+
+.client_group_button:hover {
+  /* background-color: #8E8F93; */
+  background: #ccc;
+  color: #333;
+}
+
+.client_group_button.active {
+  background: #ff1516;
+  color: #fff;
+}
+
+@media (max-width: 959px) {
+
+  .client_group_button {
+    display: none;
+  }
+}
+
+
+.client_group_select {
+  color: #555;
+  padding: 10px;
+  background: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  position: relative;
+  padding-right: 40px;
+  background: #fff url('svg/down_arrow.svg') right 10px center no-repeat;
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+
+  .client_group_select {
+    display: none;
+  }
+}
+
+.client_group_select::-ms-expand {
+  display: none;
+}
+
+
+.client_groups {}
+
+.client_group {
+  display: none;
+}
+
+.client_group.active {
+  display: block;
+}

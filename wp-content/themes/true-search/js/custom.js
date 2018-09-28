@@ -15,9 +15,9 @@ function disableOther( button ) {
 
 /* Home screen text efects
 --------------------------- */
- 
+
 (function() {
-    
+
     function showNextQuote() {
         jQuery('.quote1')
             .delay(500)
@@ -45,9 +45,9 @@ function disableOther( button ) {
             .fadeIn(800)
             .addClass('animated slideInUp');
     }
-  
+
     showNextQuote();
-    
+
 })();
 
 
@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
 jQuery('.featured-team-member').hover(
   function () {
     jQuery(this).find('.grid-team-member-mask').addClass('displayed');
-  }, 
+  },
   function () {
     jQuery(this).find('.grid-team-member-mask').removeClass('displayed');
   }
@@ -76,7 +76,7 @@ jQuery('.featured-team-member').hover(
 jQuery('.grid-team-member').hover(
   function () {
     jQuery(this).find('.grid-team-member-mask').addClass('displayed');
-  }, 
+  },
   function () {
     jQuery(this).find('.grid-team-member-mask').removeClass('displayed');
   }
@@ -87,7 +87,7 @@ jQuery('.team-close').on( 'click', function( event ) {
   jQuery(this).parent('.grid-team-member-mask').removeClass('displayed');
 });
 // e.preventDefault();
-      
+
 
 /* Lazy load team images
 -----------------------------------------*/
@@ -122,9 +122,9 @@ jQuery(document).ready(function(){
   });
 
 });
-    
 
-/* SVG 
+
+/* SVG
 -----------------------------------------*/
 
 //var svgFixer = require('/wp-content/themes/true-search/js/webkit-svg-fixer.js');
@@ -134,3 +134,33 @@ jQuery(document).ready(function(){
 -----------------------------------------*/
 
 //webkitSvgFixer.fixall()
+
+
+
+/* BP Edits - Glient Groups */
+
+(function($){
+  $(document).ready(function() {
+    $(".client_group_button").on("click", toggleClientGroups);
+    $(".client_group_select").on("change", selectClientGroups);
+
+    function toggleClientGroups(e) {
+      var $target = $(e.target);
+      var index = $(".client_group_button").index($target);
+
+      updateClientGroups(index);
+    }
+
+    function selectClientGroups(e) {
+      var index = parseInt($(".client_group_select").val(), 10);
+
+      updateClientGroups(index);
+    }
+
+    function updateClientGroups(index) {
+      $(".client_group_select").val(index);
+      $(".client_group_button").removeClass("active").eq(index).addClass("active");
+      $(".client_group").removeClass("active").eq(index).addClass("active");
+    }
+  });
+})(jQuery);

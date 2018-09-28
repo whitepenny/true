@@ -1,9 +1,9 @@
 .search-overview-container {
-    
+
     -webkit-box-pack: justify;
-    
+
         -ms-flex-pack: justify;
-    
+
             justify-content: space-between;
     padding: 0 40px 80px 40px;
     font-family: "aktiv-grotesk",sans-serif;
@@ -27,14 +27,14 @@
 @media screen and (min-width: 900px) {
 .search-overview-header h1 {
             font-size: 60px
-    }    
+    }
         }
 .search-overview-company-details {
-    
+
     -webkit-box-pack: justify;
-    
+
         -ms-flex-pack: justify;
-    
+
             justify-content: space-between;
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -66,11 +66,11 @@
 }
 .search-overview-logo {
     margin-bottom: 30px;
-    
+
     -webkit-box-pack: justify;
-    
+
         -ms-flex-pack: justify;
-    
+
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -117,7 +117,7 @@
         margin: 0 0 30px 0;
         padding: 0;
         list-style: none;
-        
+
     }
 .search-overview-sidebar p {
         margin: 0 0 20px;
@@ -163,7 +163,7 @@
     }
 .search-overview-section-list a {
         text-decoration: underline;
-        
+
     }
 .search-overview-team-members-sidebar {
     display: none;
@@ -174,7 +174,7 @@
 @media screen and (min-width: 900px) {
 .search-overview-team-members-sidebar {
         display: block
-}        
+}
     }
 .search-overview-team-members {
     line-height: 26px;
@@ -225,7 +225,7 @@
         line-height: 26px;
     }
 .search-overview-content .alignleft, .search-overview-content .alignright, .search-overview-content .aligncenter {
-        
+
         margin: 0;
         display: block;
         margin-bottom: 20px;
@@ -233,8 +233,8 @@
 
     }
 @media screen and (min-width: 900px) {
-        
-    
+
+
         .search-overview-content .alignleft {
             margin-right: 20px;
             display: inline;
@@ -262,7 +262,7 @@
         }
 .search-overview-content .search-overview-team-members-content h2 {
             text-transform: uppercase;
-        
+
             font-weight: bold;
             font-size: 18px;
             margin: 0 0 5px;
@@ -321,7 +321,7 @@
         display: none;
     }
 
-    .search-overview-container { 
+    .search-overview-container {
         display: block;
         width: 100%;
     }
@@ -353,11 +353,11 @@
 }
     }
 .placement-filter-toolbar ul {
-        
-        
+
+
         -ms-flex-wrap: wrap;
-        
-        
+
+
             flex-wrap: wrap;
     }
 @media (min-width: 960px) {
