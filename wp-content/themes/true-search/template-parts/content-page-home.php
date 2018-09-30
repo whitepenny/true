@@ -1,37 +1,72 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-	<header class="entry-header" <?php if( $feat_image ) : ?>style="background-image: url(<?php echo $feat_image; ?>); <?php endif; ?>">
-		<div class="entry-header-inner grid1060">
-			<?php
-				//variables
-				$headerintrotext = get_field('header_intro_text');
-			?>
-			<h1 class="entry-title headline-style-2">We&#8217;re 
-				<!--<span class="quotes"></span>-->
-				<span class="quotes quote1">Innovative</span>
-				<span class="quotes quote2">Transparent</span>
-				<span class="quotes quote3">Collaborative</span>
-				<span class="quotes quote4">True</span>
-			</h1>
-			<?php if( $headerintrotext ): ?>
-				<div class="header-intro-text"><?php echo $headerintrotext; ?></div>
-			<?php endif; ?>
-			<a href="#hometwo" class="chevron-down"><span class="fa fa-chevron-down"></span></a>
-			<div class="home-header-location-container">
-				<?php if( have_rows('home_header_location_repeater') ): ?>
-					<ul>
-	        	    <?php while( have_rows('home_header_location_repeater') ): the_row(); 
 
-		        	    // vars
-						$homeheaderlocation = get_sub_field('the_home_header_location'); 			
-					?>
-						<li><?php echo $homeheaderlocation; ?></li>
-					<?php endwhile; ?>
-					</ul>
-				<?php endif; ?>
-			</div>
-		</div>
-	</header><!-- .entry-header -->
+
+  <div class="home-slider-container">
+    <div class="home-slider">
+
+      <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+      <div class="home-slide">
+      	<header class="entry-header" <?php if( $feat_image ) : ?>style="background-image: url(<?php echo $feat_image; ?>); <?php endif; ?>">
+      		<div class="entry-header-inner grid1060">
+      			<?php
+      				//variables
+      				$headerintrotext = get_field('header_intro_text');
+      			?>
+      			<h1 class="entry-title headline-style-2">We&#8217;re
+      				<!--<span class="quotes"></span>-->
+      				<span class="quotes quote1">Innovative</span>
+      				<span class="quotes quote2">Transparent</span>
+      				<span class="quotes quote3">Collaborative</span>
+      				<span class="quotes quote4">True</span>
+      			</h1>
+      			<?php if( $headerintrotext ): ?>
+      				<div class="header-intro-text"><?php echo $headerintrotext; ?></div>
+      			<?php endif; ?>
+      			<a href="#hometwo" class="chevron-down"><span class="fa fa-chevron-down"></span></a>
+      			<div class="home-header-location-container">
+      				<?php if( have_rows('home_header_location_repeater') ): ?>
+      					<ul>
+      	        	    <?php while( have_rows('home_header_location_repeater') ): the_row();
+
+      		        	    // vars
+      						$homeheaderlocation = get_sub_field('the_home_header_location');
+      					?>
+      						<li><?php echo $homeheaderlocation; ?></li>
+      					<?php endwhile; ?>
+      					</ul>
+      				<?php endif; ?>
+      			</div>
+      		</div>
+      	</header><!-- .entry-header -->
+      </div>
+
+      <?php while(have_rows('slider')) : the_row(); ?>
+      <?php $thumb = get_sub_field('image'); ?>
+      <div class="home-slide entry-header" style="background-image: url(<?php echo $thumb['url']; ?>);">
+        <div class="entry-header-inner grid1060">
+          <div class="home-slide__outer">
+            <div class="home-slide__container">
+              <h1 class="home-slide__heading entry-title headline-style-2">
+                <?php the_sub_field('heading'); ?>
+              </h1>
+              <div class="home-slide__content header-intro-text">
+                <?php the_sub_field('content') ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php endwhile; ?>
+
+    </div>
+    <div class="home-slider-pager grid1060">
+      <div class="home-slider-prev"></div>
+      <div class="home-slider-dots"></div>
+      <div class="home-slider-next"></div>
+    </div>
+  </div>
+
+
 
 	<div class="entry-content">
 
@@ -53,10 +88,10 @@
 
 			<div class="home-two-three-buckets-container grid1120">
 				<?php if( have_rows('home_section_two_bucket_repeater') ): ?>
-	        	    <?php while( have_rows('home_section_two_bucket_repeater') ): the_row(); 
+	        	    <?php while( have_rows('home_section_two_bucket_repeater') ): the_row();
 
 		        	    // vars
-						$hometwobucketimage = get_sub_field('home_section_two_bucket_image'); 
+						$hometwobucketimage = get_sub_field('home_section_two_bucket_image');
 						$hometwobucketheadline = get_sub_field('home_section_two_bucket_headline');
 						$hometwobuckettext = get_sub_field('home_section_two_bucket_text');
 					?>
@@ -67,7 +102,7 @@
 	                    	</div>
 	                    <?php endif; ?>
 						<div class="home-two-bucket-text-container">
-							
+
 							<?php if( $hometwobucketheadline ): ?>
 								<h4><?php echo $hometwobucketheadline; ?></h4>
 							<?php endif; ?>
@@ -96,7 +131,7 @@
 					<div class="home-three-text"><?php echo $homethreetext; ?></div>
 				<?php endif; ?>
 			</div>
-			
+
 			<div class="client-overview-container">
 				<div class="client-overview-arrow"></div>
 
@@ -110,7 +145,7 @@
 			$clientquery = new WP_Query( $args );
 
 			if( $clientquery->have_posts() ) : ?>
-				<?php while( $clientquery->have_posts() ): $clientquery->the_post(); 
+				<?php while( $clientquery->have_posts() ): $clientquery->the_post();
 
 					//variables
 					$clientarchiveimage = get_field('client_overview_image');
@@ -131,7 +166,7 @@
 
 			</div>
 		</div>
-		
+
 		<?php
 			//variables
 			$homefourimage = get_field('home_section_four_background_image');

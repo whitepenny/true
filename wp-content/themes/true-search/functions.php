@@ -106,6 +106,9 @@ add_action( 'widgets_init', 'true_search_widgets_init' );
  * Enqueue scripts and styles.
  */
 function true_search_scripts() {
+  // Moved from True Talent Advisory
+  wp_enqueue_style( 'true-slick', get_stylesheet_directory_uri() . '/js/slick/slick.css', array(), '20180930' );
+
 	wp_enqueue_style( 'true-search-style', get_stylesheet_uri(), array(), '20180930' );
 
 	wp_enqueue_style( 'true-search-header-style', get_template_directory_uri() . '/css/header.css', array(), '20160905' );
@@ -130,6 +133,9 @@ function true_search_scripts() {
 
   // Moved from taxonomy.php
   wp_enqueue_script( 'true-search-filters', get_template_directory_uri() . '/styles/dist/main.min.js', array('jquery'), '20180930', true );
+
+  // Moved from True Talent Advisory
+  wp_enqueue_script( 'true-slick', get_template_directory_uri() . '/js/slick/slick.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'true-search-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '20180930', true );
 

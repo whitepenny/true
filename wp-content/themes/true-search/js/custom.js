@@ -283,3 +283,18 @@ jQuery(document).ready(function(){
     $container.equalize("resize");
   }
 })(jQuery);
+
+
+/* BP Edits - Home slider from True Talent */
+(function($) {
+  $(document).ready(function() {
+    $('.home-slider').slick({
+      'dots': true,
+      'prevArrow': '.home-slider-prev',
+      'nextArrow': '.home-slider-next',
+      'appendDots': '.home-slider-dots',
+      'autoplay': true,
+      'autoplaySpeed': 6000
+    });
+  });
+})(jQuery);
