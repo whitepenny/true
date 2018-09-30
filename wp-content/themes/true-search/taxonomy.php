@@ -1,9 +1,34 @@
+<?php
 
+// Convert Search & Filter to new taxonomies
+$sf_filters = array(
+  '_sft_placement_practice' => 'practices',
+  '_sft_placement_function' => 'functions',
+  '_sft_placement_asset' => 'assets',
+  '_sft_placement_location' => 'locations',
+  '_sft_placement_quarters' => 'quarters',
+);
+
+$new_filters = array();
+
+foreach ( $sf_filters as $sf_key => $new_key ) {
+  if ( ! empty( $_GET[ $sf_key ] ) ) {
+    $new_filters[] = $new_key . '=' . $_GET[ $sf_key ];
+  }
+}
+
+if ( ! empty( $new_filters ) ) {
+  $term_id = get_queried_object_id();
+  $current_url = get_term_link( $term_id );
+
+  wp_redirect( $current_url . '#' . implode( '&', $new_filters ) );
+  die();
+}
+
+?>
 
 
 <?php get_header(); ?>
-
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/styles/dist/main.min.js"></script>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
@@ -13,81 +38,49 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
                     <div class="entry-header-inner grid2400">
-                        
+
                         <h1 class="entry-title headline-style-2"><?php single_cat_title(); ?></h1>
-                        
+
                             <div class="header-intro-text"><?php echo category_description(); ?></div>
-                        
+
                     </div>
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
                     <div class="client-overview-arrow"></div>
-                    
+
                     <div style="text-align: center;">
                     <div class="placement-filter-toolbar">
-                    <?php echo do_shortcode('[searchandfilter slug="placements"]' ); ?>
+
+                      <?php // echo do_shortcode('[searchandfilter slug="placements"]' ); ?>
+                      <?php get_template_part( 'template-parts/placement-filters' ); ?>
+
                     </div>
                     </div>
-                    
-                    <div class="grid2400">    
-                        
+
+                    <div class="grid2400">
+
                         <div class="placement-previews" id="filterResults">
 
-                            <?php if(have_posts()): ?>
-                                <?php while( have_posts() ): the_post(); 
+                            <?php get_template_part( 'template-parts/placement-loop' ); ?>
 
-                            
-                                ?>
+                            <!-- Loading... -->
 
-                                <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-
-                                
-                                <div class="placement-preview">
-                                    <div class="placement-preview__container">
-                                        <div class="placement-preview__image">
-                                            <img src="<?php echo $thumb['0']; ?>" alt="">
-                                        </div>
-                                        <div class="placement-preview__content">
-                                            <h3><?php the_field('placement_position'); ?></h3>
-                                            <ul>
-                                                                                                
-                                                <li><?php the_field('placement_location'); ?></li>
-                                                
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <?php endwhile; ?>
-                            <?php else: ?>
-                                <div class="placement-no-results">
-                                    <h2>No Results</h2>
-                                    <p>There are no results that match the criteria.</p>
-                                </div>
-                            <?php endif; ?>
-
-
-
-                            
-
-                            
                         </div>
 
-                        <?php 
-                        echo '<div class="pagination">';
-                        echo paginate_links(array(
-                            'type' => 'list',
-                            'prev_text' => 'previous',
-                            'next_text' => 'next',
-                        ));
-                        echo '</div>';
+                        <?php
+                        // echo '<div class="pagination">';
+                        // echo paginate_links(array(
+                        //     'type' => 'list',
+                        //     'prev_text' => 'previous',
+                        //     'next_text' => 'next',
+                        // ));
+                        // echo '</div>';
                         ?>
 
                     </div>
 
-                    
+
                 </div><!-- .entry-content -->
 
             </article><!-- #post-## -->
@@ -95,17 +88,5 @@
 
         </main><!-- #main -->
     </div><!-- #primary -->
-
-    <script>
-        (function($) {
-            
-            $('.placement-previews').equalize();
-
-            $(document).on("sf:ajaxfinish", ".searchandfilter", function(){
-                $('.placement-previews').equalize("resize");
-            });
-            
-        })( jQuery );
-    </script>
 
 <?php get_footer(); ?>

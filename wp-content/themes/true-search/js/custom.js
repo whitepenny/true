@@ -137,7 +137,7 @@ jQuery(document).ready(function(){
 
 
 
-/* BP Edits - Glient Groups */
+/* BP Edits - Client Groups */
 
 (function($){
   $(document).ready(function() {
@@ -163,4 +163,123 @@ jQuery(document).ready(function(){
       $(".client_group").removeClass("active").eq(index).addClass("active");
     }
   });
+})(jQuery);
+
+
+/* BP Edits - Placement Filtering */
+
+(function($) {
+  var $items;
+  var $noResults;
+  var $container = $("#filterResults");
+  var $form = $(".searchandfilter");
+  var $filters = $(".searchandfilter").find("select");
+
+  var activeFilters = [];
+  var activeQuery = [];
+
+  $(document).ready(function() {
+    // init();
+    onInit();
+  });
+
+  // function init() {
+  //   $.ajax({
+  //     url: 'http://truesearch.test/wp-admin/admin-ajax.php',
+  //     type: 'GET',
+  //     data: {
+  //       'action': 'placements_get_posts',
+  //       'collection': 63
+  //     },
+  //     success: function(response) {
+  //       $container.html(response);
+  //
+  //       onInit();
+  //     }
+  //   });
+  // }
+
+  function onInit() {
+    $items = $(".placement-preview");
+    $noResults = $(".placement-no-results");
+
+    $container.equalize({
+      target: ".placement-preview"
+    });
+
+    parseQuery();
+  }
+
+  function parseQuery() {
+    var parts = window.location.hash.replace("#", "").split("&");
+    var query = {};
+
+    for (var i = 0; i < parts.length; i++) {
+      var s = parts[i].split("=");
+
+      $('select[name="' + s[0] + '"]').val(s[1]);
+    }
+
+    doFilter();
+
+    $form.on("change", "select", onFilterChange);
+    $form.on("click", ".search-filter-reset", onFilterReset);
+  }
+
+  function onFilterChange(e) {
+    doFilter();
+  }
+
+  function onFilterReset(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    $filters.val("");
+
+    doFilter();
+  }
+
+  function doFilter() {
+    var activeFilters = [];
+    var activeQuery = [];
+
+    $filters.each(function() {
+      var $this = $(this);
+      var key = $this.attr("name");
+      var val = $this.val();
+
+      if ( val !== "" ) {
+        activeFilters.push(val);
+        activeQuery.push( key + '=' + val );
+      }
+    });
+
+    $items.each(function() {
+      var $this = $(this);
+      var classes = $this.attr("class").split(" ");
+      var visible = true;
+
+      for (var i = 0; i < activeFilters.length; i++) {
+        if ($.inArray(activeFilters[i], classes) < 0) {
+          visible = false;
+        }
+      }
+
+      if (visible) {
+        $this.show();
+      } else {
+        $this.hide();
+      }
+    });
+
+    if ($items.filter(":visible").length == 0) {
+      $noResults.show();
+    } else {
+      $noResults.hide();
+    }
+
+    window.location.hash = activeQuery.length ? activeQuery.join("&") : "-";
+
+    $container.equalize("resize");
+  }
 })(jQuery);
