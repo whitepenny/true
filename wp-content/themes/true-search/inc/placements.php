@@ -94,6 +94,7 @@ function ts_populate_placement_filter_category_select( $field ) {
   $terms = get_terms( array(
     'taxonomy' => 'placement_category',
     'parent' => 0,
+    'hide_empty' => false
   ) );
 
   foreach ( $terms as $term ) {

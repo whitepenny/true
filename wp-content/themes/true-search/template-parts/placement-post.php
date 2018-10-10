@@ -1,5 +1,5 @@
 <?php
-$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 $term_classes = ts_get_placement_classes( $post->ID );
 ?>
 <div class="placement-preview <?php echo $term_classes; ?>" style="display: none;">

@@ -27,7 +27,7 @@ $filters = get_field( 'filters', $term );
           ?>
 					<option class="" value="<?php echo $child_term->slug; ?>">
             <?php echo $child_term->name; ?>
-            (<?php echo $count; ?>)
+            <?php /* (<?php echo $count; ?>) */ ?>
           </option>
           <?php
               endif;

@@ -171,16 +171,23 @@ jQuery(document).ready(function(){
 (function($) {
   var $items;
   var $noResults;
-  var $container = $("#filterResults");
-  var $form = $(".searchandfilter");
-  var $filters = $(".searchandfilter").find("select");
+  var $container;
+  var $form;
+  var $filters;
 
   var activeFilters = [];
   var activeQuery = [];
 
   $(document).ready(function() {
     // init();
-    onInit();
+
+    $container = $("#filterResults");
+    $form = $(".searchandfilter");
+    $filters = $(".searchandfilter").find("select");
+
+    if ($container.length) {
+      onInit();
+    }
   });
 
   // function init() {
@@ -260,7 +267,10 @@ jQuery(document).ready(function(){
       var visible = true;
 
       for (var i = 0; i < activeFilters.length; i++) {
-        if ($.inArray(activeFilters[i], classes) < 0) {
+        var alt1 = activeFilters[i] + '-1';
+        var alt2 = activeFilters[i] + '-2';
+
+        if ($.inArray(activeFilters[i], classes) < 0 && $.inArray(alt1, classes) < 0 && $.inArray(alt2, classes) < 0) {
           visible = false;
         }
       }

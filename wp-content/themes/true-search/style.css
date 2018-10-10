@@ -4381,12 +4381,39 @@ body .searchandfilter ul li {
 
 
 /* BP Edits - Glient Groups */
+.client_group_header {
+  background: none;
+}
 
 .client_group_buttons {
+  background: none;
   display: flex;
-  justify-content: center;
-  padding: 20px;
+/*   justify-content: center; */
+  margin: -56px auto 0;
+  padding: 0;
   text-align: center;
+}
+
+@media (max-width: 959px) {
+  .client_group_buttons {
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+}
+
+.client_group_buttons {
+  width: 90%;
+}
+@media screen and (min-width: 1166px) {
+  .client_group_buttons {
+    width: 1060px;
+  }
+}
+@media screen and (min-width: 1232px) {
+  .client_group_buttons {
+    padding-left: 26px;
+    width: 1120px;
+  }
 }
 
 .client_group_button {
@@ -4607,4 +4634,31 @@ body .searchandfilter ul li {
   .home .home-slide__container .entry-title.headline-style-2 {
     font-size: 110px;
   }
+}
+
+
+.home-slide__button {
+  background: #ff1516;
+  border: none;
+  border-color: #ff1516;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 21px 56px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.home-slide__button:focus,
+.home-slide__button:active {
+  outline: 0;
+}
+
+.home-slide__button:hover {
+  background-color: #000;
+  color: #fff;
 }

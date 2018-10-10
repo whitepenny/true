@@ -20,9 +20,13 @@ $client_groups = get_field( 'client_groups' );
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div class="sector-section-two sector-header-section">
-
-			<div class="client_group_buttons">
+		<div class="sector-section-two sector-header-section client_group_header">
+      <?php
+        // NEW CLIENT TABS
+        if ( ! empty( $client_groups ) ) :
+          if ( count( $client_groups ) > 1 ) :
+      ?>
+			<div class="client_group_buttons grid1120">
 	      <?php
 					$i = 0;
 	        foreach ( $client_groups as $client_group ) :
@@ -44,7 +48,11 @@ $client_groups = get_field( 'client_groups' );
 		      ?>
 				</select>
 			</div>
-
+			<?php
+  			  endif;
+			?>
+		</div>
+		<div class="sector-section-two sector-header-section client_group_header">
 			<div class="client_groups">
 	      <?php
 					$i = 0;
@@ -75,11 +83,11 @@ $client_groups = get_field( 'client_groups' );
 	        endforeach;
 	      ?>
 			</div>
+      <?php
+        else:
 
-
-
-      <?php /*
-      // OLD CLIENTS REPEATER
+        // OLD CLIENTS REPEATER
+      ?>
 			<div class="sector-client-container">
 
 				<?php global $post; ?>
@@ -118,8 +126,9 @@ $client_groups = get_field( 'client_groups' );
 				<?php endif; ?>
 
 			</div>
-      // END OLD CLIENTS REPEATER
-      */ ?>
+      <?php
+        endif;
+      ?>
 
 		</div>
 

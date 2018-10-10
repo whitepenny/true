@@ -52,6 +52,14 @@
               <div class="home-slide__content header-intro-text">
                 <?php the_sub_field('content') ?>
               </div>
+              <?php
+                $button = get_sub_field('button');
+                if ( ! empty( $button ) ) :
+              ?>
+              <a href="<?php echo $button['url']; ?>" class="home-slide__button"><?php echo $button['title']; ?></a>
+              <?php
+                endif;
+              ?>
             </div>
           </div>
         </div>
