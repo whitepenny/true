@@ -101,7 +101,7 @@
                     <li>
                         <h3><?php the_sub_field('name'); ?></h3>
                         <p><?php the_sub_field('title'); ?></p>
-                        <p><a href="<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
+                        <p><a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
                         <p><?php the_sub_field('phone'); ?></p>
                     </li>
                     <?php endwhile; ?>
