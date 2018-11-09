@@ -99,6 +99,7 @@
                 <ul class="search-overview-team-members">
                     <?php while(have_rows('team_members')) : the_row(); ?>    
                     <li>
+                        <!-- Any changes here should be made below as well -->
                         <h3><?php the_sub_field('name'); ?></h3>
                         <p><?php the_sub_field('title'); ?></p>
                         <p><a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
@@ -158,6 +159,7 @@
                 <ul class="search-overview-team-members">
                     <?php while(have_rows('team_members')) : the_row(); ?>    
                     <li>
+                        <!-- Any changes here should be made above as well -->
                         <h3><?php the_sub_field('name'); ?></h3>
                         <p><?php the_sub_field('title'); ?></p>
                         <p><a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
