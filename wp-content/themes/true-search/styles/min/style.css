@@ -345,6 +345,7 @@
         color: #fff;
     }
 .placement-filter-toolbar {
+    width: 100%;
     padding: 100px 20px 20px;
 }
 @media (min-width: 800px) {
@@ -376,6 +377,7 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
+            justify-content: center;
         }
 .searchandfilter ul li {
                 margin: 0;
