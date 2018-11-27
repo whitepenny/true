@@ -109,7 +109,7 @@ function true_search_scripts() {
   // Moved from True Talent Advisory
   wp_enqueue_style( 'true-slick', get_stylesheet_directory_uri() . '/js/slick/slick.css', array(), '20180930' );
 
-	wp_enqueue_style( 'true-search-style', get_stylesheet_uri(), array(), '20181009' );
+	wp_enqueue_style( 'true-search-style', get_stylesheet_uri(), array(), '20181017' );
 
 	wp_enqueue_style( 'true-search-header-style', get_template_directory_uri() . '/css/header.css', array(), '20160905' );
 

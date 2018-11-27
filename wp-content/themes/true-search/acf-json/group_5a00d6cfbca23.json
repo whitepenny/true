@@ -46,6 +46,25 @@
             ]
         },
         {
+            "key": "field_5bc7d78e54dab",
+            "label": "Client Groups Default Label",
+            "name": "client_groups_default_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5bae2cd2c3a51",
             "label": "Client Groups",
             "name": "client_groups",
@@ -203,5 +222,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1538141530
+    "modified": 1539823519
 }

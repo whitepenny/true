@@ -25,9 +25,16 @@ $client_groups = get_field( 'client_groups' );
         // NEW CLIENT TABS
         if ( ! empty( $client_groups ) ) :
           if ( count( $client_groups ) > 1 ) :
+
+          $label = get_field( 'client_groups_default_label' );
+          if ( empty( $label ) ) {
+            $label = 'All';
+          }
+
       ?>
 			<div class="client_group_buttons grid1120">
 	      <?php
+  	      /*
 					$i = 0;
 	        foreach ( $client_groups as $client_group ) :
 	      ?>
@@ -35,8 +42,11 @@ $client_groups = get_field( 'client_groups' );
 	      <?php
 						$i++;
 	        endforeach;
+	        */
 	      ?>
+  	    <span class="client_group_label">View Clients:</span>
 				<select class="client_group_select">
+  				<!-- <option value=""><?php echo $label; ?></option> -->
 					<?php
 						$i = 0;
 		        foreach ( $client_groups as $client_group ) :
