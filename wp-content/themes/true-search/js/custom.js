@@ -299,7 +299,7 @@ jQuery(document).ready(function(){
 (function($) {
   $(document).ready(function() {
     $('.home-slider').slick({
-      'dots': true,
+      'dots': false,
       'prevArrow': '.home-slider-prev',
       'nextArrow': '.home-slider-next',
       'appendDots': '.home-slider-dots',
