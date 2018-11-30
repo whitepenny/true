@@ -218,7 +218,7 @@ function placement_practices() {
 
   $args = array(
     'labels' => $labels,
-    // 'public' => false,
+    'public' => false,
   );
 
   register_taxonomy( 'placement_practice', 'placement', $args );
@@ -244,7 +244,7 @@ function placement_functions() {
 
   $args = array(
     'labels' => $labels,
-    // 'public' => false,
+    'public' => false,
   );
 
   register_taxonomy( 'placement_function', 'placement', $args );
@@ -270,7 +270,7 @@ function placement_assets() {
 
   $args = array(
     'labels' => $labels,
-    // 'public' => false,
+    'public' => false,
   );
 
   register_taxonomy( 'placement_asset', 'placement', $args );
@@ -296,7 +296,7 @@ function placement_locations() {
 
   $args = array(
     'labels' => $labels,
-    // 'public' => false,
+    'public' => false,
   );
 
   register_taxonomy( 'placement_location', 'placement', $args );
@@ -347,7 +347,7 @@ function placement_quarters() {
 
   $args = array(
     'labels' => $labels,
-    // 'public' => false,
+    'public' => false,
   );
 
   register_taxonomy( 'placement_quarters', 'placement', $args );
