@@ -107,10 +107,10 @@ add_filter('acf/load_field/name=placement_filter_category_select', 'ts_populate_
 
 // Save terms as classes
 
-function ts_get_placement_classes( $post_id ) {
+function ts_get_placement_classes( $post_id, $force = false ) {
   $term_classes = get_post_meta( $post_id, '_term_classes', true );
 
-  if ( empty( $term_classes ) ) {
+  if ( empty( $term_classes ) || $force ) {
     $terms = wp_get_post_terms( $post_id, 'placement_category', array( 'fields' => 'slugs' ) );
     $term_classes = implode( ' ', $terms );
 
@@ -121,7 +121,7 @@ function ts_get_placement_classes( $post_id ) {
 }
 
 function ts_placements_save_post( $post_id, $post, $update ) {
-  ts_get_placement_classes( $term_classes );
+  ts_get_placement_classes( $post_id, true );
 }
 add_action( 'save_post', 'ts_placements_save_post', 999, 3 );
 
