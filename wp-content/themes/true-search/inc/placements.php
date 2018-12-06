@@ -125,6 +125,13 @@ function ts_placements_save_post( $post_id, $post, $update ) {
 }
 add_action( 'save_post', 'ts_placements_save_post', 999, 3 );
 
+function ts_placements_edit_term( $term_id, $tt_id, $taxonomy ) {
+  if ( $taxonomy == 'placement_category' ) {
+    delete_post_meta_by_key( '_term_classes' );
+  }
+}
+add_action( 'edit_term', 'ts_placements_edit_term', 999, 3 );
+
 // Get count by collection and category
 
 function ts_placements_get_collection_category_count( $collection, $category ) {
