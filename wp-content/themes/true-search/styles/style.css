@@ -631,6 +631,10 @@ span.page-numbers, a.page-numbers {
   padding: 26px 13px 12px 26px;
 }
 
+.salesforce_form select, body .gform_wrapper select {
+    padding: 15px 23px;
+}
+
 .salesforce_form  input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
   padding: 12px 13px 12px 26px;
 }
