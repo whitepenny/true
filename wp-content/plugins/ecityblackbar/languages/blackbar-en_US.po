@@ -1,0 +1,101 @@
+# Copyright (C) 2018 blackbar
+# This file is distributed under the same license as the blackbar package.
+msgid ""
+msgstr ""
+"Project-Id-Version: blackbar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Gemini Labs <support@geminilabs.io>\n"
+"Last-Translator: Paul Ryley <paul@geminilabs.io>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Keywordslist: "
+"__;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_"
+"attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Searchpath-0: .\n"
+"X-Poedit-Searchpathexcluded-0: *.js\n"
+"X-Poedit-Sourcecharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: qps-ploc\n"
+
+#: activate.php:132
+msgid "The %s plugin was deactivated."
+msgstr "The %s plugin was deactivated."
+
+#: activate.php:133
+msgid "Sorry, this plugin requires %s or greater in order to work properly."
+msgstr "Sorry, this plugin requires %s or greater in order to work properly."
+
+#: activate.php:134
+msgid ""
+"Please contact your hosting provider or server administrator to upgrade the "
+"version of PHP on your server (your server is running PHP version %s), or "
+"try to find an alternative plugin."
+msgstr ""
+"Please contact your hosting provider or server administrator to upgrade the "
+"version of PHP on your server (your server is running PHP version %s), or "
+"try to find an alternative plugin."
+
+#: activate.php:135
+msgid "PHP version"
+msgstr "PHP version"
+
+#: activate.php:136
+msgid "WordPress version"
+msgstr "WordPress version"
+
+#: activate.php:137
+msgid "Update WordPress"
+msgstr "Update WordPress"
+
+#: src/Controller.php:130
+msgid "%s on line %s in file %s"
+msgstr "%s on line %s in file %s"
+
+#: src/Controller.php:155
+msgid "Errors (%s)"
+msgstr "Errors (%s)"
+
+#: src/Controller.php:180
+msgid "Profiler (%s ms)"
+msgstr "Profiler (%s ms)"
+
+#: src/Controller.php:216
+msgid "SQL"
+msgstr "SQL"
+
+#: src/Controller.php:225
+msgid "SQL (%s queries in %s ms)"
+msgstr "SQL (%s queries in %s ms)"
+
+#: views/debug-bar.php:4
+msgid "Toggle"
+msgstr "Toggle"
+
+#: views/debug-bar.php:5
+msgid "Globals"
+msgstr "Globals"
+
+#: views/debug-bar.php:9
+msgid "Templates"
+msgstr "Templates"
+
+#: views/debug-bar.php:12
+msgid "Close"
+msgstr "Close"
+
+#: views/panels/errors.php:7
+msgid "No errors found."
+msgstr "No errors found."
+
+#: views/panels/queries.php:7
+msgid "must be enabled to view SQL queries"
+msgstr "must be enabled to view SQL queries"
+
+#: views/panels/queries.php:13
+msgid "Find queries containing"
+msgstr "Find queries containing"
+
+#: views/panels/queries.php:14
+msgid "Minimum Execution Time"
+msgstr "Minimum Execution Time"

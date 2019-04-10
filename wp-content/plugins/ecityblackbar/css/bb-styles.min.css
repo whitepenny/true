@@ -1,0 +1,185 @@
+
+
+#BlackBarTop {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #000
+}
+
+#BlackBarTop ul.links {
+    padding: 0;
+    list-style: none
+}
+
+#BlackBarTop ul.links li.link a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 1px 0 0;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 12px;
+    overflow: hidden;
+    -webkit-transition: .3s;
+    transition: .3s
+}
+
+#BlackBarTop ul.links li.link a.current-site,
+#BlackBarTop ul.links li.link a:hover {
+    background-color: #222
+}
+
+#BlackBarTop ul.links li.link a.current-site img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0)
+}
+
+#BlackBarTop ul.links li.link a img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+#BlackBarBottom {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #000
+}
+
+#BlackBarBottom p.our-brands {
+    display: block;
+    margin: 15px 0 10px;
+    padding: 0 10px;
+    color: #777;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase
+}
+
+@media all and (min-width:768px) {
+    #BlackBarBottom p.our-brands {
+        display: none
+    }
+}
+
+#BlackBarBottom ul.links,
+#BlackBarBottom ul.links li.link a,
+#BlackBarTop ul.links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0
+}
+
+#BlackBarBottom ul.links {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0
+}
+
+@media all and (min-width:768px) {
+    #BlackBarBottom ul.links {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+}
+
+#BlackBarBottom ul.links li.link {
+    margin: 0;
+    width: 50%
+}
+
+@media all and (min-width:768px) {
+    #BlackBarBottom ul.links li.link {
+        width: 50%
+    }
+}
+
+@media all and (min-width:992px) {
+    #BlackBarBottom ul.links li.link {
+        width: 20%
+    }
+}
+
+#BlackBarBottom ul.links li.link a {
+    padding: 10px;
+    font-size: 12px;
+    overflow: hidden;
+    text-decoration: none
+}
+
+#BlackBarBottom ul.links li.link a,
+#BlackBarBottom ul.links li.link a:hover {
+    -webkit-transition: .3s;
+    transition: .3s
+}
+
+#BlackBarBottom ul.links li.link a:hover span {
+    color: #bbb
+}
+
+#BlackBarBottom ul.links li.link a span {
+    display: block;
+    color: #999;
+    font-weight: 700
+}
+
+#BlackBarBottom ul.links li.link a img {
+    display: none
+}
+
+@media all and (min-width:768px) {
+    #BlackBarBottom ul.links li.link a {
+        padding: 20px 10px;
+        -webkit-filter: brightness(80%);
+        filter: brightness(80%)
+    }
+    #BlackBarBottom ul.links li.link a.current-site,
+    #BlackBarBottom ul.links li.link a:hover {
+        -webkit-filter: brightness(100%);
+        filter: brightness(100%)
+    }
+    #BlackBarBottom ul.links li.link a.current-site img,
+    #BlackBarBottom ul.links li.link a:hover img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0)
+    }
+    #BlackBarBottom ul.links li.link a:hover {
+        -webkit-transition: .3s;
+        transition: .3s
+    }
+    #BlackBarBottom ul.links li.link a span {
+        display: none
+    }
+    #BlackBarBottom ul.links li.link a img {
+        display: inline-block;
+        vertical-align: middle;
+        /*width: 100%;*/
+        height: auto;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        -o-object-fit: contain;
+        object-fit: contain;
+        margin: 0 auto !important;
+    }
+}
+
+
